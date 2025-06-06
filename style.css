@@ -130,33 +130,32 @@ nav ul .dropdown li a {
 
 /* Hero Section */
 
- .hero {
-    position: relative;
-    background: var(--bg-light);
-    color: var(--text-light);
+.hero {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    margin: 0 auto;
     padding: min(2rem, 10%);
+    background: var(--bg-light);
+    color: var(--text-light);
     font-size: clamp(1rem, 2vw, 1.5rem);
     max-width: 100%;
-    margin: 0 auto;
     width: 100%;
-    min-block-size: 50dvh;
-    background-image: url("https://images.unsplash.com/photo-1734599397715-f030c6d206a0?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    min-block-size: 60dvh;
+    background-image: url("https://media.istockphoto.com/id/625379326/photo/organic-cosmetic-children-for-bath-on-wooden-bakground-close-up.jpg?s=1024x1024&w=is&k=20&c=wqt4t1NYvSs1JD2BdaPr58E5kR96BSi8vUjOHdeJLQA=");
     background-size: cover;
     place-content: center;
     background-repeat: no-repeat;
-    color: var(--text-dark);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 1s ease;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     z-index: 1;
- }
+} 
 
 .hero::before {
     content: '';
@@ -219,6 +218,7 @@ nav ul .dropdown li a {
     margin-bottom: 1rem;
     color: var(--text-light);
 }
+
 .feature-container {
     display: flex;
     flex-wrap: wrap;
