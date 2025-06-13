@@ -2989,7 +2989,7 @@ nav.scrolled {
 }
 
 .payment-container {
-    max-width:100%;
+    max-width: 100%;
     width: 90%;
     margin: 0 auto;
     position: relative;
@@ -2998,13 +2998,18 @@ nav.scrolled {
 
 .payment-methods-grid {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
     gap: 2rem;
     margin-bottom: 4rem;
 }
 
 .payment-method-card {
+    flex: 1 1 250px;
     background: var(--card-bg);
     padding: 2rem;
     border-radius: 15px;
