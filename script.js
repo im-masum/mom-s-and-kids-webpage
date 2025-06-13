@@ -52,24 +52,23 @@ function clearCart() {
 
 function toggleDarkMode() {
   const body = document.body;
-  const currentTheme = body.getAttribute("data-theme");
-  const newTheme = currentTheme === "dark" ? "light" : "dark";
+  const isDark = body.getAttribute("data-theme") === "dark";
+  const newTheme = isDark ? "light" : "dark";
 
   body.setAttribute("data-theme", newTheme);
   localStorage.setItem("theme", newTheme);
 
   // Update toggle button icon
-  const toggleBtn = document.querySelector(".dark-toggle");
-  toggleBtn.innerHTML = newTheme === "dark" ? "☀️" : "🌙";
+  document.querySelector(".dark-toggle").textContent = isDark ? "🌙" : "☀️";
 }
 
 function initTheme() {
-  const savedTheme = localStorage.getItem("theme") || "light";
+  const savedTheme = localStorage.getItem("theme") || "dark";
   document.body.setAttribute("data-theme", savedTheme);
 
   // Set initial toggle button icon
   const toggleBtn = document.querySelector(".dark-toggle");
-  toggleBtn.innerHTML = savedTheme === "dark" ? "☀️" : "🌙";
+  toggleBtn.textContent = savedTheme === "dark" ? "☀️" : "🌙";
 }
 
 document.addEventListener("DOMContentLoaded", initTheme);

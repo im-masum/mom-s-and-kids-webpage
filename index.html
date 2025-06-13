@@ -27,29 +27,64 @@
     <div class="cart-icon" onclick="location.href='cart.html'">
       🛒 <span id="cart-count" class="cart-count">0</span>
     </div>
+    <!-- Dark Mode Toggle -->
+    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
   </nav>
 
   <header class="hero" id="hero">
     <div class="hero-content">
-      <h1>Welcome to Mom & Kids</h1>
-      <p class="hero-subtitle">Your one-stop destination for quality products that make motherhood beautiful</p>
-      <div class="hero-buttons">
-        <a href="products.html" class="cta-btn primary">Shop Now</a>
-        <a href="#features" class="cta-btn secondary">Learn More</a>
+      <div class="hero-text">
+        <h1 class="animate-text">Welcome to Mom & Kids</h1>
+        <p class="hero-subtitle animate-text">Your one-stop destination for quality products that make motherhood
+          beautiful</p>
+        <div class="hero-buttons">
+          <a href="products.html" class="cta-btn primary">
+            <span>Shop Now</span>
+            <i class="arrow">→</i>
+          </a>
+          <a href="#features" class="cta-btn secondary">
+            <span>Learn More</span>
+            <i class="arrow">↓</i>
+          </a>
+        </div>
       </div>
+
       <div class="hero-features">
         <div class="hero-feature">
-          <span>✨</span>
+          <span class="feature-icon">✨</span>
           <p>Premium Quality</p>
+          <span class="feature-desc">Handpicked products for your family</span>
         </div>
         <div class="hero-feature">
-          <span>🚚</span>
+          <span class="feature-icon">🚚</span>
           <p>Free Shipping</p>
+          <span class="feature-desc">On orders over $50</span>
         </div>
         <div class="hero-feature">
-          <span>💝</span>
+          <span class="feature-icon">💝</span>
           <p>Mom Approved</p>
+          <span class="feature-desc">Trusted by thousands of moms</span>
         </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">10k+</span>
+          <span class="stat-label">Happy Customers</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">500+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">24/7</span>
+          <span class="stat-label">Support</span>
+        </div>
+      </div>
+
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <div class="scroll-arrow">↓</div>
       </div>
     </div>
   </header>
@@ -115,8 +150,6 @@
     <p>&copy; 2025 Mom & Kids. All rights reserved.</p>
   </footer>
 
-  <!-- Dark Mode Toggle -->
-  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
   <!-- js link -->
   <script src="script.js"></script>
 </body>
