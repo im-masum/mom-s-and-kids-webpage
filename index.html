@@ -6,29 +6,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mom & Kids - Home</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
   <nav>
-    <div class="logo" onclick="location.href='index.html'">Mom & Kids</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li>
-        <a href="#">Products ▾</a>
-        <ul class="dropdown">
-          <li><a href="products.html#mom">Mom Products</a></li>
-          <li><a href="products.html#kids">Kids Products</a></li>
-          <li><a href="products.html#baby">Baby Products</a></li>
+    <div class="nav-container">
+      <div class="logo" onclick="location.href='index.html'">
+        <span class="logo-text">Mom & Kids</span>
+      </div>
+
+      <div class="nav-links">
+        <ul>
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li class="dropdown-container">
+            <a href="#" class="nav-link">Products ▾</a>
+            <ul class="dropdown">
+              <li><a href="#mom-products">Mom Products</a></li>
+              <li><a href="#kids-products">Kids Products</a></li>
+              <li><a href="#baby-products.html">Baby Products</a></li>
+            </ul>
+          </li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
-      </li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <div class="cart-icon" onclick="location.href='cart.html'">
-      🛒 <span id="cart-count" class="cart-count">0</span>
+      </div>
+
+      <div class="nav-actions">
+        <div class="cart-icon" id="cart" onclick="location.href='cart.html'"> 
+          <span class="cart-icon-text">🛒</span>
+          <span id="cart-count" class="cart-count">0</span>
+        </div>
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+      </div>
     </div>
-    <!-- Dark Mode Toggle -->
-    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
   </nav>
 
   <header class="hero" id="hero">
@@ -90,19 +101,107 @@
   </header>
 
   <section class="features" id="features">
-    <h1>Our Features</h1>
-    <div class="feature-container">
-      <div class="feature">
-        <h2>Trusted Quality</h2>
-        <p>Carefully selected products for your family.</p>
+    <div class="features-header">
+      <h1>Our Features</h1>
+      <p>Discover why thousands of moms trust us for their family's needs</p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-medal"></i>
+        </div>
+        <h2>Premium Quality</h2>
+        <p>Carefully selected products that meet the highest standards of quality and safety.</p>
+        <ul class="feature-list">
+          <li>Certified Materials</li>
+          <li>Safety Tested</li>
+          <li>Durable Products</li>
+        </ul>
       </div>
-      <div class="feature">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-truck"></i>
+        </div>
         <h2>Fast Delivery</h2>
-        <p>Get your orders delivered quickly and safely.</p>
+        <p>Quick and reliable shipping to your doorstep with real-time tracking.</p>
+        <ul class="feature-list">
+          <li>Same Day Dispatch</li>
+          <li>Free Shipping</li>
+          <li>Track Orders</li>
+        </ul>
       </div>
-      <div class="feature">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
         <h2>24/7 Support</h2>
-        <p>We're here to help anytime you need us.</p>
+        <p>Our dedicated team is always ready to assist you with any questions.</p>
+        <ul class="feature-list">
+          <li>Live Chat</li>
+          <li>Phone Support</li>
+          <li>Email Support</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <h2>Secure Shopping</h2>
+        <p>Shop with confidence using our secure payment system.</p>
+        <ul class="feature-list">
+          <li>SSL Protected</li>
+          <li>Secure Payments</li>
+          <li>Data Privacy</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-undo"></i>
+        </div>
+        <h2>Easy Returns</h2>
+        <p>Hassle-free return policy for your complete satisfaction.</p>
+        <ul class="feature-list">
+          <li>30-Day Returns</li>
+          <li>Free Returns</li>
+          <li>Quick Refunds</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <i class="fas fa-gift"></i>
+        </div>
+        <h2>Loyalty Program</h2>
+        <p>Earn rewards and exclusive benefits with our loyalty program.</p>
+        <ul class="feature-list">
+          <li>Points System</li>
+          <li>Special Offers</li>
+          <li>Member Discounts</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="features-stats">
+      <div class="stat-item">
+        <div class="stat-number">10k+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Products</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Support</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">Satisfaction</div>
       </div>
     </div>
   </section>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mom & Kids - Mom's Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="location.href='index.html'">
+                <span class="logo-text">Mom & Kids</span>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link active">Products ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="moms-products.html" class="nav-link active">Mom Products</a></li>
+                            <li><a href="kids-products.html">Kids Products</a></li>
+                            <li><a href="baby-products.html">Baby Products</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <div class="cart-icon" onclick="location.href='cart.html'">
+                    <span class="cart-icon-text">🛒</span>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+                <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="products-page">
+        <header class="page-header">
+            <h1>Mom's Products</h1>
+            <p>Discover our curated collection of premium products for moms</p>
+        </header>
+
+        <section class="category-section">
+            <div class="section-header">
+                <h2>Skincare & Beauty</h2>
+                <p>Premium products for your daily self-care routine</p>
+            </div>
+            <div class="products-flex">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500"
+                            alt="Skincare Set">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Skincare Set</h3>
+                        <p>Complete skincare routine for glowing skin</p>
+                        <div class="product-meta">
+                            <span class="price">$89.99</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500"
+                            alt="Beauty Bundle">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Beauty Essentials Bundle</h3>
+                        <p>All-in-one beauty collection</p>
+                        <div class="product-meta">
+                            <span class="price">$129.99</span>
+                            <div class="rating">★★★★☆</div>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="section-header">
+                <h2>Wellness & Health</h2>
+                <p>Products to support your health and wellness journey</p>
+            </div>
+            <div class="products-flex">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500"
+                            alt="Wellness Kit">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Wellness Bundle</h3>
+                        <p>Essential wellness products for busy moms</p>
+                        <div class="product-meta">
+                            <span class="price">$149.99</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Fitness Set">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fitness Collection</h3>
+                        <p>Stay active with our premium fitness gear</p>
+                        <div class="product-meta">
+                            <span class="price">$99.99</span>
+                            <div class="rating">★★★★☆</div>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-section">
+            <div class="section-header">
+                <h2>Fashion & Style</h2>
+                <p>Trendy and comfortable clothing for moms</p>
+            </div>
+            <div class="products-flex">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=500" alt="Fashion Set">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Mom Fashion Collection</h3>
+                        <p>Stylish and comfortable clothing</p>
+                        <div class="product-meta">
+                            <span class="price">$79.99</span>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=500" alt="Accessories">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Accessories Set</h3>
+                        <p>Complete your look with our accessories</p>
+                        <div class="product-meta">
+                            <span class="price">$59.99</span>
+                            <div class="rating">★★★★☆</div>
+                        </div>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mom & Kids. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

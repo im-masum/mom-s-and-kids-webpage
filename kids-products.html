@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mom & Kids - Kids Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" onclick="location.href='index.html'">
+                <span class="logo-text">Mom & Kids</span>
+            </div>
+
+            <div class="nav-links">
+                <ul>
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="dropdown-container">
+                        <a href="#" class="nav-link active">Products ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="moms-products.html">Mom Products</a></li>
+                            <li><a href="kids-products.html" class="nav-link active">Kids Products</a></li>
+                            <li><a href="baby-products.html">Baby Products</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-actions">
+                <div class="cart-icon" onclick="location.href='cart.html'">
+                    <span class="cart-icon-text">🛒</span>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+                <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="products-page">
+        <header class="page-header">
+            <h1>Kids Products</h1>
+            <p>Explore our fun and educational products for kids</p>
+        </header>
+
+        <section class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500" alt="Educational Toys">
+                <h3>Educational Toys Set</h3>
+                <p>Fun and learning combined in one package</p>
+                <span class="price">$49.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=500" alt="Kids Fashion">
+                <h3>Kids Fashion Collection</h3>
+                <p>Stylish and comfortable clothing for kids</p>
+                <span class="price">$39.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=500" alt="Activity Kit">
+                <h3>Creative Activity Kit</h3>
+                <p>Arts and crafts for creative minds</p>
+                <span class="price">$29.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mom & Kids. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
