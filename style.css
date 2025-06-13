@@ -8,6 +8,15 @@
     --text-dark: #fefdfd;
     --accent: #cbcac4;
     --transition: 0.3s ease;
+    /* Light mode variables */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --accent-color: #ff6b6b;
+    --border-color: #e0e0e0;
+    --card-bg: rgba(255, 255, 255, 0.1);
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Dark Mode */
@@ -19,6 +28,15 @@ body.dark {
     --text-light: #fefdfd;
     --text-dark: #292929;
     --accent: #ffb703;
+    /* Dark mode variables */
+    --bg-primary: #1a1a1a;
+    --bg-secondary: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #ff8585;
+    --border-color: #404040;
+    --card-bg: rgba(45, 45, 45, 0.7);
+    --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
 /* Reset & Base */
@@ -28,14 +46,16 @@ body.dark {
     box-sizing: border-box;
     font-family: 'Segoe UI', sans-serif;
     scroll-behavior: smooth;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 body {
     font-size: 16px;
-    background-color: var(--primary);
-    color: var(--text-dark);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
     margin: 0;
     line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 /* Navbar */
@@ -43,23 +63,23 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--primary);
+    background: var(--bg-secondary);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
     z-index: 999;
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav .logo {
     font-family: 'Arial', sans-serif;
     font-size: 1.8rem;
     font-weight: bold;
-    color: var(--text-light);
+    color: var(--text-primary);
     text-decoration: none;
     cursor: pointer;
     transition: color var(--transition);
-
 }
 
 nav ul {
@@ -75,7 +95,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--text-light);
+    color: var(--text-primary);
     padding: min(1rem, 8%)1rem;
     text-decoration: none;
     font-weight: 500;
@@ -95,11 +115,11 @@ nav ul .dropdown {
     position: absolute;
     top: 120%;
     left: 0;
-    background: var(--primary);
+    background: var(--bg-secondary);
     min-width: 170px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
+    border: 1px solid var(--border-color);
 }
 
 nav ul li:hover .dropdown {
@@ -114,17 +134,15 @@ nav ul .dropdown li a {
     justify-content: center;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
 }
 
 /* Cart Icon */
 .cart-icon {
     font-size: 1.4rem;
-    color: var(--text-light);
+    color: var(--text-primary);
     text-decoration: none;
     position: relative;
     cursor: pointer;
-
 }
 
 .cart-count {
@@ -139,32 +157,13 @@ nav ul .dropdown li a {
 }
 
 /* Hero Section */
-
 .hero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    min-height: 100dvh;
     position: relative;
-    margin: 0 auto;
-    padding: min(2rem, 10%);
-    background: var(--bg-light);
-    color: var(--text-light);
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    max-width: 100%;
-    width: 100%;
-    min-block-size: 60dvh;
-    background-image: url("https://media.istockphoto.com/id/625379326/photo/organic-cosmetic-children-for-bath-on-wooden-bakground-close-up.jpg?s=1024x1024&w=is&k=20&c=wqt4t1NYvSs1JD2BdaPr58E5kR96BSi8vUjOHdeJLQA=");
-    background-size: cover;
-    place-content: center;
-    background-repeat: no-repeat;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 1s ease;
-    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
-    z-index: 1;
 }
 
 .hero::before {
@@ -172,44 +171,164 @@ nav ul .dropdown li a {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1516627145497-ae6968895b74?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     z-index: -1;
+    animation: zoomIn 20s infinite alternate;
+}
+
+.hero-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeIn 1s ease-out;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     margin: 0;
-    color: var(--text-light);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+    animation: slideDown 1s ease-out;
 }
 
-.hero p {
-    font-size: 1.2rem;
-    margin: 1rem 0;
-    font-weight: 500;
+.hero-subtitle {
+    font-size: 1.8rem;
+    max-width: 800px;
+    margin: 0;
+    opacity: 0.9;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1s ease-out;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    animation: fadeIn 1.5s ease-out;
 }
 
 .cta-btn {
-    background: var(--secondary);
-    color: var(--text-light);
-    padding: min(8px, 16%) 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 20px;
+    padding: 1.2rem 2.5rem;
+    border-radius: 50px;
     text-decoration: none;
-    font-weight: bold;
-    transition: background var(--transition);
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-btn.primary {
+    background-color: var(--accent-color);
+    color: white;
+    box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.cta-btn.secondary {
+    background-color: transparent;
+    border: 2px solid var(--text-primary);
+    color: var(--text-primary);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .cta-btn:hover {
-    background: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero-features {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+    animation: slideUp 2s ease-out;
+}
+
+.hero-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    background: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.hero-feature:hover {
+    transform: translateY(-5px);
+}
+
+.hero-feature span {
+    font-size: 2.5rem;
+}
+
+.hero-feature p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Features Section */
-
-
 .features {
     display: flex;
     flex-direction: column;
@@ -226,7 +345,7 @@ nav ul .dropdown li a {
 .features h1 {
     font-size: clamp(1.5rem, 2vw, 2.5rem);
     margin-bottom: 1rem;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 .feature-container {
@@ -240,7 +359,7 @@ nav ul .dropdown li a {
 .feature {
     flex: 1 1 250px;
     background: var(--bg-light);
-    color: var(--text-light);
+    color: var(--text-primary);
     padding: min(1rem, 5%);
     margin: 1rem;
     border-radius: 8px;
@@ -251,7 +370,6 @@ nav ul .dropdown li a {
     position: relative;
     overflow: hidden;
     border: .5px solid var(--accent);
-
 }
 
 .feature:hover {
@@ -271,13 +389,12 @@ nav ul .dropdown li a {
     text-align: center;
     animation: fadeIn 1s ease;
     margin: 2rem auto;
-
 }
 
 #about h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 #about p {
@@ -285,10 +402,8 @@ nav ul .dropdown li a {
     line-height: 1.6;
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
-
+    color: var(--text-primary);
 }
-
 
 /* Contact Section */
 #contact {
@@ -297,7 +412,6 @@ nav ul .dropdown li a {
     align-items: center;
     justify-content: center;
     width: 100%;
-
     padding: min(2rem, 10%);
     background: var(--bg-light);
     color: var(--text-dark);
@@ -310,7 +424,7 @@ nav ul .dropdown li a {
 #contact h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 #contact p {
@@ -320,7 +434,7 @@ nav ul .dropdown li a {
     line-height: 1.6;
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 #contact form {
@@ -337,8 +451,15 @@ nav ul .dropdown li a {
 #contact input,
 #contact textarea {
     padding: 0.8rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-color);
     border-radius: 4px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: var(--text-secondary);
 }
 
 #contact button {
@@ -364,18 +485,19 @@ nav ul .dropdown li a {
     align-items: center;
     justify-content: center;
     padding: min(2rem, 10%);
-    background: var(--bg-light);
+    background: var(--bg-secondary);
     color: var(--text-dark);
     text-align: center;
     animation: fadeIn 1s ease;
     margin: 2rem auto;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-color);
 }
 
 .cart h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 .cart p {
@@ -383,7 +505,7 @@ nav ul .dropdown li a {
     line-height: 1.6;
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    color: var(--text-light);
+    color: var(--text-primary);
 }
 
 .cart ul {
@@ -392,7 +514,7 @@ nav ul .dropdown li a {
     margin: 0;
     width: 100%;
     max-width: 600px;
-    background: var(--bg-light);
+    background: var(--bg-primary);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -422,8 +544,9 @@ nav ul .dropdown li a {
 footer {
     text-align: center;
     padding: 1rem;
-    background: var(--primary);
-    color: #fff;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-top: 1px solid var(--border-color);
 }
 
 /* Dark Mode Toggle Button */
@@ -431,20 +554,24 @@ footer {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-size: 1.5rem;
-    background-color: var(--primary);
-    color: #fff;
-    border: none;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    padding: 10px 14px;
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    color: var(--text-primary);
+    font-size: 1.5rem;
     cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease;
-    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 .dark-toggle:hover {
-    background-color: var(--accent);
+    transform: scale(1.1);
 }
 
 /* Animations */
@@ -476,7 +603,7 @@ footer {
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        background: var(--primary);
+        background: var(--bg-secondary);
         position: absolute;
         top: 70px;
         left: 0;
@@ -493,5 +620,43 @@ footer {
         cursor: pointer;
         font-size: 1.5rem;
         color: #fff;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hero-feature {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .cta-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 }

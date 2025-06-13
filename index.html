@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Mom & Kids - Home</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-            <div class="logo" onclick="location.href='index.html'">Mom & Kids</div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">Products ▾</a>
-                    <ul class="dropdown">
-                        <li><a href="products.html#mom">Mom Products</a></li>
-                        <li><a href="products.html#kids">Kids Products</a></li>
-                        <li><a href="products.html#baby">Baby Products</a></li>
-                    </ul>
-                </li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            <div class="cart-icon" onclick="location.href='cart.html'">
-                🛒 <span id="cart-count" class="cart-count">0</span>
-            </div>
-        </nav>
-        
-  <header class="hero " id="hero">
-    <h1>Welcome to Mom & Kids</h1>
-    <p>Your one-stop shop for moms and little ones!</p>
-    <a href="products.html" class="cta-btn">Shop Now</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mom & Kids - Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav>
+    <div class="logo" onclick="location.href='index.html'">Mom & Kids</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="#">Products ▾</a>
+        <ul class="dropdown">
+          <li><a href="products.html#mom">Mom Products</a></li>
+          <li><a href="products.html#kids">Kids Products</a></li>
+          <li><a href="products.html#baby">Baby Products</a></li>
+        </ul>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="cart-icon" onclick="location.href='cart.html'">
+      🛒 <span id="cart-count" class="cart-count">0</span>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Welcome to Mom & Kids</h1>
+      <p class="hero-subtitle">Your one-stop destination for quality products that make motherhood beautiful</p>
+      <div class="hero-buttons">
+        <a href="products.html" class="cta-btn primary">Shop Now</a>
+        <a href="#features" class="cta-btn secondary">Learn More</a>
+      </div>
+      <div class="hero-features">
+        <div class="hero-feature">
+          <span>✨</span>
+          <p>Premium Quality</p>
+        </div>
+        <div class="hero-feature">
+          <span>🚚</span>
+          <p>Free Shipping</p>
+        </div>
+        <div class="hero-feature">
+          <span>💝</span>
+          <p>Mom Approved</p>
+        </div>
+      </div>
+    </div>
   </header>
 
   <section class="features" id="features">
     <h1>Our Features</h1>
     <div class="feature-container">
-        <div class="feature">
-          <h2>Trusted Quality</h2>
-          <p>Carefully selected products for your family.</p>
-        </div>
-        <div class="feature">
-          <h2>Fast Delivery</h2>
-          <p>Get your orders delivered quickly and safely.</p>
-        </div>
-        <div class="feature">
-          <h2>24/7 Support</h2>
-          <p>We’re here to help anytime you need us.</p>
-        </div>
+      <div class="feature">
+        <h2>Trusted Quality</h2>
+        <p>Carefully selected products for your family.</p>
+      </div>
+      <div class="feature">
+        <h2>Fast Delivery</h2>
+        <p>Get your orders delivered quickly and safely.</p>
+      </div>
+      <div class="feature">
+        <h2>24/7 Support</h2>
+        <p>We're here to help anytime you need us.</p>
+      </div>
     </div>
   </section>
 
   <section class="about" id="about">
     <h2>About Us</h2>
-    <p>We are passionate about providing high-quality products for moms and their little ones. Our store is curated with love, focusing on safety, reliability, and style.</p>
+    <p>We are passionate about providing high-quality products for moms and their little ones. Our store is curated with
+      love, focusing on safety, reliability, and style.</p>
   </section>
 
   <section id="contact">
@@ -72,7 +94,7 @@
     <p class="total" id="total">Total: $0</p>
     <button onclick="clearCart()">Clear Cart</button>
   </section>
-   
+
   <section class="testimonials">
     <h2>What Our Customers Say</h2>
     <div class="testimonial">
@@ -88,14 +110,15 @@
       <span>- Jessica L.</span>
     </div>
   </section>
-  
+
   <footer>
-      <p>&copy; 2025 Mom & Kids. All rights reserved.</p>
-    </footer>
-    
-    <!-- Dark Mode Toggle -->
-    <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
-    <!-- js link -->
-    <script src="script.js"></script>
+    <p>&copy; 2025 Mom & Kids. All rights reserved.</p>
+  </footer>
+
+  <!-- Dark Mode Toggle -->
+  <button class="dark-toggle" onclick="toggleDarkMode()">🌙</button>
+  <!-- js link -->
+  <script src="script.js"></script>
 </body>
+
 </html>
