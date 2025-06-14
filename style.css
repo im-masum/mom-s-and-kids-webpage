@@ -421,11 +421,23 @@ nav.scrolled {
     box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
+.cta-btn.primary:hover {
+    background-color: var(--gradient-primary);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
 .cta-btn.secondary {
     background-color: transparent;
     border: 2px solid white;
     color: white;
     box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.cta-btn.secondary:hover {
+    background-color: var(--accent);
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
 }
 
 .cta-btn:hover {
