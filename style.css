@@ -93,7 +93,8 @@ nav.scrolled {
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
     padding: 1rem 2rem;
     display: flex;
@@ -102,8 +103,12 @@ nav.scrolled {
 }
 
 .logo {
-    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
     transition: transform 0.3s ease;
+
 }
 
 .logo:hover {
@@ -113,10 +118,11 @@ nav.scrolled {
 .logo-text {
     font-size: 1.5rem;
     font-weight: bold;
-    background: var(--gradient-primary);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    background: linear-gradient(45deg, #f7d427, #f8534d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease;
+    animation: slideDown 1s ease-out;
 }
 
 .nav-links ul {
@@ -309,12 +315,18 @@ nav.scrolled {
 
 /* Hero Section */
 .hero {
-    min-height: 100dvh;
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100dvh;
+    position: relative;
     overflow: hidden;
+    padding: min(2rem, 16%) 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+
+
 }
 
 .hero::before {
@@ -424,11 +436,16 @@ nav.scrolled {
 .hero-features {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 2rem;
     animation: fadeInUp 2s ease-out;
 }
 
 .hero-feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--gradient-light);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -444,7 +461,7 @@ nav.scrolled {
 }
 
 .feature-icon {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
 }
@@ -2841,6 +2858,7 @@ nav.scrolled {
     position: relative;
     z-index: 2;
     transition: all 0.4s ease;
+    font-size: 2rem;
 }
 
 /* Individual social media colors and effects */
@@ -2893,16 +2911,6 @@ nav.scrolled {
     text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
 }
 
-/* Pinterest specific */
-.social-link .fa-pinterest {
-    color: #e60023;
-    transition: all 0.4s ease;
-}
-
-.social-link:hover .fa-pinterest {
-    color: white;
-    text-shadow: 0 0 10px rgba(230, 0, 35, 0.5);
-}
 
 /* Add pulse animation */
 @keyframes socialPulse {
@@ -3044,6 +3052,12 @@ nav.scrolled {
     position: relative;
     z-index: 1;
     transition: all 0.3s ease;
+}
+
+
+.payment-method-card i:hover {
+    transform: translateY(-5px);
+    color: #EB001B;
 }
 
 .payment-method-card h3 {
