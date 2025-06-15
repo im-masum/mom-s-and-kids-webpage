@@ -563,6 +563,18 @@ nav.scrolled {
     padding: 0.5rem 0;
 
 }
+.stat-nmbr{
+    animation: countUp 0.5s ease forwards;
+    transition: all 0.3s ease; 
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--text-color);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-weight: 600;
+    text-align: center;
+
+
+}
 
 .stat-label {
     font-size: 0.9rem;
@@ -631,8 +643,12 @@ nav.scrolled {
         font-size: 1.2rem;
     }
 
-    .stat-number {
+    .stat-nmbr {
         font-size: 1.5rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
     }
 }
 
