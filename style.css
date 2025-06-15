@@ -322,7 +322,7 @@ nav.scrolled {
     position: relative;
     overflow: hidden;
     padding: min(2rem, 16%) 1rem;
-    margin: 0 auto;
+    margin: 4rem auto;
     max-width: 100%;
     width: 100%;
 
@@ -387,12 +387,13 @@ nav.scrolled {
     display: flex;
     gap: 1.5rem;
     justify-content: center;
+    align-items: center;
     margin-top: 2rem;
     animation: fadeIn 1.5s ease-out;
 }
 
 .cta-btn {
-    padding: 1.2rem 2.5rem;
+    padding: min(.5rem, 8%) 1.5rem;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
@@ -449,7 +450,7 @@ nav.scrolled {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 1.5rem;
     animation: fadeInUp 2s ease-out;
 }
 
@@ -465,7 +466,11 @@ nav.scrolled {
     padding: 2rem;
     border-radius: 20px;
     transition: transform 0.3s ease;
-    min-width: 250px;
+    max-width: 350px;
+
+    width: 100%;
+    height:250px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 .hero-feature:hover {
@@ -492,19 +497,21 @@ nav.scrolled {
 
 /* Hero Stats Styles */
 .hero-stats {
-    min-width: 100%;
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    width: 100%;
     gap: 2rem;
-    margin-top: 3rem;
-    padding: min(1rem, 8%) 1rem;
+    margin-top: 2rem;
+    padding: min(1rem, 8%) 0;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(34, 33, 33, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
 }
 
 .stat {
@@ -516,7 +523,7 @@ nav.scrolled {
     max-width: 200px;
     width: 100%;
     gap: 1rem;
-    padding: min(1rem, 8%) 1rem;
+    padding: min(1rem, 8%) 0.5rem;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 15px;
     transition: all 0.3s ease;
@@ -524,7 +531,7 @@ nav.scrolled {
 
 .stat:hover {
     transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(247, 243, 243, 0.1);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -537,12 +544,14 @@ nav.scrolled {
     background: var(--gradient-light);
     border-radius: 12px;
     font-size: 1.5rem;
-    color: white;
+    padding: 1rem;
+    color: var(--accent);
     transition: all 0.3s ease;
 }
 
 .stat:hover .stat-icon {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
+    background: var(--gradient-dark);
 }
 
 .stat-content {
@@ -551,21 +560,28 @@ nav.scrolled {
     justify-content: center;
     flex-direction: column;
     gap: 0.3rem;
+    color: var(--text-dark);
+    padding: 0.5rem 0;
+
 }
 
-.stat-number {
-    color: var(--accent);
+.stat-number{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 2rem;
     font-weight: 600;
     text-align: center;
     background: var(--gradient-dark);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+    animation: countUp 0.5s ease forwards;
+    transition: all 0.3s ease;
 
+}
 .stat-label {
     font-size: 0.9rem;
-    color: var(--text-dark);
+    color: white;
     opacity: 0.8;
 }
 
@@ -606,15 +622,16 @@ nav.scrolled {
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .hero-stats {
-        grid-template-columns: repeat(2, 1fr);
+        display: flex;
         gap: 1.5rem;
         padding: 1.5rem;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
     .hero-stats {
-        grid-template-columns: 1fr;
+        display: flex;
         gap: 1rem;
         padding: 1rem;
     }
@@ -636,8 +653,9 @@ nav.scrolled {
 
 .hero-scroll {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem;
     left: 50%;
+    right: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
