@@ -564,24 +564,9 @@ nav.scrolled {
 
 }
 
-.stat-number {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-    font-weight: 600;
-    text-align: center;
-    background: var(--gradient-dark);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: countUp 0.5s ease forwards;
-    transition: all 0.3s ease;
-
-}
-
 .stat-label {
     font-size: 0.9rem;
-    color: white;
+    color: var(--text-color);
     opacity: 0.8;
 }
 
@@ -598,10 +583,10 @@ nav.scrolled {
     }
 }
 
-.stat {
+ .stat {
     animation: countUp 0.5s ease forwards;
     opacity: 0;
-}
+} 
 
 .stat:nth-child(1) {
     animation-delay: 0.1s;
@@ -835,6 +820,7 @@ nav.scrolled {
     width: 60px;
     height: 60px;
     border-radius: 50%;
+    margin: 0 auto;
     margin-bottom: 1.5rem;
     color: var(--accent);
     font-size: 1.5rem;
