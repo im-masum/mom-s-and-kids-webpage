@@ -794,14 +794,16 @@ nav.scrolled {
 .feature-card {
     flex: 1 1 300px;
     max-width: 350px;
+    height: 400px;
     background: var(--card-bg);
     border-radius: 15px;
-    padding: 2rem;
+    padding: 1rem;
     box-shadow: 0 4px 20px var(--nav-shadow);
     transition: all 0.3s ease;
     animation: fadeIn 0.5s ease;
     position: relative;
     overflow: hidden;
+
 }
 
 .feature-card::before {
@@ -826,15 +828,15 @@ nav.scrolled {
 }
 
 .feature-icon {
-    width: 60px;
-    height: 60px;
-    background: var(--gradient-primary);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: var(--gradient-primary);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     margin-bottom: 1.5rem;
-    color: white;
+    color: var(--accent);
     font-size: 1.5rem;
     transition: all 0.3s ease;
 }
