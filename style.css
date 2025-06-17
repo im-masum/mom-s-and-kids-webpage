@@ -3343,7 +3343,7 @@ nav.scrolled {
 /* Menu Toggle Styles */
 .menu-toggle {
     display: none;
-    background: none;
+    background: var(--bg-dark);
     border: none;
     cursor: pointer;
     padding: 0.5rem;
@@ -3405,11 +3405,15 @@ nav.scrolled {
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background: var(--bg-color);
-        padding: 5rem 2rem 2rem;
+        background: var(--bg-light);
+        color: var(--text-color);
+        padding: min(1rem, 10%) 2rem;
         transition: right 0.3s ease;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         z-index: 999;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: var(--accent-color) transparent;
     }
 
     .nav-links.active {
