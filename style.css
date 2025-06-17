@@ -72,6 +72,14 @@ body {
     line-height: 1.6;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+ section{
+    max-width: 100%;
+    width: 100%;
+    margin: 1rem auto;
+    padding: min(1rem, 10%);
+    background: var(--bg-light);
+ 
+}
 
 /* Navbar Styles */
 nav {
@@ -880,35 +888,6 @@ nav.scrolled {
     color: var(--accent-color);
 }
 
-.features-stats {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3rem;
-    margin-top: 4rem;
-    position: relative;
-    z-index: 1;
-}
-
-.stat-item {
-    text-align: center;
-    animation: fadeInUp 0.5s ease;
-}
-/* 
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: bold;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 0.5rem;
-} */
-
-.stat-label {
-    color: var(--text-color);
-    font-size: 1.1rem;
-    opacity: 0.8;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -929,17 +908,6 @@ nav.scrolled {
         padding: 1.5rem;
     }
 
-    .features-stats {
-        gap: 2rem;
-    }
-
-    .stat-number {
-        font-size: 2rem;
-    }
-
-    .stat-label {
-        font-size: 1rem;
-    }
 }
 
 /* About Section Styles */
