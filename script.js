@@ -80,3 +80,43 @@ window.onload = () => {
     document.body.classList.add("dark");
   }
 };
+
+// Menu Toggle Functionality
+function toggleMenu() {
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.querySelector(".nav-links");
+  const body = document.body;
+
+  // Create overlay if it doesn't exist
+  let overlay = document.querySelector(".nav-overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.className = "nav-overlay";
+    document.body.appendChild(overlay);
+  }
+
+  // Toggle classes
+  menuToggle.classList.toggle("active");
+  navLinks.classList.toggle("active");
+  overlay.classList.toggle("active");
+  body.style.overflow = navLinks.classList.contains("active") ? "hidden" : "";
+
+  // Close menu when clicking overlay
+  overlay.addEventListener("click", () => {
+    menuToggle.classList.remove("active");
+    navLinks.classList.remove("active");
+    overlay.classList.remove("active");
+    body.style.overflow = "";
+  });
+
+  // Close menu when clicking a link
+  const navItems = document.querySelectorAll(".nav-links a");
+  navItems.forEach((item) => {
+    item.addEventListener("click", () => {
+      menuToggle.classList.remove("active");
+      navLinks.classList.remove("active");
+      overlay.classList.remove("active");
+      body.style.overflow = "";
+    });
+  });
+}
