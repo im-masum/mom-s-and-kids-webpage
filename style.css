@@ -894,7 +894,7 @@ nav.scrolled {
     text-align: center;
     animation: fadeInUp 0.5s ease;
 }
-
+/* 
 .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
@@ -902,7 +902,7 @@ nav.scrolled {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     margin-bottom: 0.5rem;
-}
+} */
 
 .stat-label {
     color: var(--text-color);
