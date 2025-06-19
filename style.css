@@ -2910,9 +2910,9 @@ nav.scrolled {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: fadeInDown 0.5s ease;
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* animation: fadeInDown 0.5s ease; */
 }
 
 .testimonials-header p {
@@ -2922,580 +2922,639 @@ nav.scrolled {
     animation: fadeInUp 0.5s ease;
 }
 
+/* --- TESTIMONIALS CONTAINER FLEX ENHANCEMENT --- */
 .testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin: 3rem 0 2rem 0;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto 4rem;
+    justify-content: center;
+    align-items: stretch;
     position: relative;
     z-index: 1;
 }
 
 .testimonial-card {
-    background: var(--card-bg);
-    border-radius: 20px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px var(--nav-shadow);
-    transition: all 0.3s ease;
-    animation: fadeIn 0.5s ease;
+    flex: 1 1 340px;
+    max-width: 400px;
+    min-width: 280px;
 }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px var(--nav-shadow);
+@media (max-width: 900px) {
+    .testimonials-container {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .testimonial-card {
+        min-width: 85vw;
+        max-width: 95vw;
+        flex: 0 0 auto;
+    }
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(40, 62, 86, 0.10);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    padding: 2.2rem 2rem 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
+    position: relative;
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    animation: testimonialIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.testimonial-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.testimonial-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.testimonial-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+@keyframes testimonialIn {
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.testimonial-card:hover, .testimonial-card:focus-within {
+    box-shadow: 0 16px 48px rgba(var(--primary-rgb), 0.18);
+    border: 1.5px solid var(--primary-color);
+    transform: translateY(-6px) scale(1.03);
 }
 
 .testimonial-content {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
 .rating {
     display: flex;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.rating i {
+    gap: 0.2rem;
     color: #ffd700;
     font-size: 1.2rem;
+    margin-bottom: 0.5rem;
 }
 
 .testimonial-text {
+    font-size: 1.08rem;
     color: var(--text-color);
-    font-size: 1.1rem;
-    line-height: 1.6;
     font-style: italic;
+    opacity: 0.92;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
 }
 
 .testimonial-author {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.1rem;
+    margin-top: 0.5rem;
 }
 
 .author-image {
-    width: 60px;
-    height: 60px;
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid var(--accent-color);
+    box-shadow: 0 2px 12px #ffd70033;
+    border: 2.5px solid #fff;
+    background: #fff;
 }
 
 .author-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 50%;
 }
 
 .author-info h4 {
-    font-size: 1.1rem;
-    color: var(--text-color);
-    margin-bottom: 0.25rem;
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.2rem;
 }
 
 .author-info p {
+    font-size: 0.98rem;
+    color: var(--light-text);
+    opacity: 0.85;
+}
+
+.testimonials-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    text-align: center;
+    animation: fadeInUp 0.5s ease;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
     color: var(--text-color);
+    font-size: 1.1rem;
     opacity: 0.8;
+}
 
+.testimonials-cta {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
 
+.testimonials-cta p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.5s ease;
+}
 
-    .testimonials-stats {
-        display: flex;
-        justify-content: center;
-        gap: 4rem;
-        margin-bottom: 4rem;
-        position: relative;
-        z-index: 1;
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.5s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(var(--accent-color-rgb), 0.3);
+}
+
+.cta-button i {
+    transition: transform 0.3s ease;
+}
+
+.cta-button:hover i {
+    transform: translateX(5px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .testimonials {
+        padding: 3rem 1rem;
     }
 
-    .stat-item {
-        text-align: center;
-        animation: fadeInUp 0.5s ease;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        margin-bottom: 0.5rem;
-    }
-
-    .stat-label {
-        color: var(--text-color);
-        font-size: 1.1rem;
-        opacity: 0.8;
-    }
-
-    .testimonials-cta {
-        text-align: center;
-        position: relative;
-        z-index: 1;
-    }
-
-    .testimonials-cta p {
-        font-size: 1.2rem;
-        color: var(--text-color);
-        margin-bottom: 1.5rem;
-        animation: fadeIn 0.5s ease;
-    }
-
-    .cta-button {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        padding: 1rem 2rem;
-        background: var(--gradient-primary);
-        color: white;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        animation: fadeInUp 0.5s ease;
-    }
-
-    .cta-button:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(var(--accent-color-rgb), 0.3);
-    }
-
-    .cta-button i {
-        transition: transform 0.3s ease;
-    }
-
-    .cta-button:hover i {
-        transform: translateX(5px);
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        .testimonials {
-            padding: 3rem 1rem;
-        }
-
-        .testimonials-header h2 {
-            font-size: 2rem;
-        }
-
-        .testimonials-header p {
-            font-size: 1rem;
-        }
-
-        .testimonials-container {
-            gap: 1.5rem;
-        }
-
-        .testimonial-card {
-            padding: 1.5rem;
-        }
-
-        .testimonials-stats {
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-        }
-    }
-
-    .social-links {
-        display: flex;
-        gap: 1.2rem;
-        margin-top: 1.5rem;
-    }
-
-    .social-link {
-        width: 45px;
-        height: 45px;
-        border-radius: 12px;
-        background: var(--card-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--text-color);
-        font-size: 1.4rem;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .social-link::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--gradient-primary);
-        opacity: 0;
-        transition: opacity 0.4s ease;
-        z-index: 1;
-    }
-
-    .social-link i {
-        position: relative;
-        z-index: 2;
-        transition: all 0.4s ease;
+    .testimonials-header h2 {
         font-size: 2rem;
     }
 
-    /* Individual social media colors and effects */
-    .social-link:hover {
-        transform: translateY(-5px) scale(1.1);
-        box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.3);
+    .testimonials-header p {
+        font-size: 1rem;
     }
 
-    .social-link:hover i {
-        color: white;
-        transform: scale(1.2) rotate(360deg);
+    .testimonials-container {
+        gap: 1.5rem;
     }
 
-    .social-link:hover::before {
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .testimonials-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+}
+
+.social-links {
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.social-link i {
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    font-size: 2rem;
+}
+
+/* Individual social media colors and effects */
+.social-link:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.3);
+}
+
+.social-link:hover i {
+    color: white;
+    transform: scale(1.2) rotate(360deg);
+}
+
+.social-link:hover::before {
+    opacity: 1;
+}
+
+/* Facebook specific */
+.social-link .fa-facebook {
+    color: #1877f2;
+    transition: all 0.4s ease;
+}
+
+.social-link:hover .fa-facebook {
+    color: white;
+    text-shadow: 0 0 10px rgba(24, 119, 242, 0.5);
+}
+
+/* Instagram specific */
+.social-link .fa-instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s ease;
+}
+
+.social-link:hover .fa-instagram {
+    -webkit-text-fill-color: white;
+    text-shadow: 0 0 10px rgba(220, 39, 67, 0.5);
+}
+
+/* Twitter specific */
+.social-link .fa-twitter {
+    color: #1da1f2;
+    transition: all 0.4s ease;
+}
+
+.social-link:hover .fa-twitter {
+    color: white;
+    text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
+}
+
+
+/* Add pulse animation */
+@keyframes socialPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(var(--accent-color-rgb), 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0);
+    }
+}
+
+.social-link:hover {
+    animation: socialPulse 1.5s infinite;
+}
+
+/* Add floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.social-link {
+    animation: float 3s ease-in-out infinite;
+}
+
+.social-link:hover {
+    animation: none;
+}
+
+/* Payment Section Styles */
+.payment {
+    padding: 5rem 2rem;
+    background: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: var(--gradient-secondary);
+    opacity: 0.05;
+    z-index: 0;
+}
+
+.payment-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.payment-header h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+}
+
+.payment-header p {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+.payment-container {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.payment-methods-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100%;
+    width: 90%;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.payment-method-card {
+    flex: 1 1 250px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.payment-method-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.payment-method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
+}
+
+.payment-method-card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+
+.payment-method-card i:hover {
+    transform: translateY(-5px);
+    color: #EB001B;
+}
+
+.payment-method-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.payment-method-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+    position: relative;
+    z-index: 1;
+}
+
+.payment-security {
+    margin-bottom: 4rem;
+}
+
+.security-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.security-feature {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.security-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
+}
+
+.security-feature i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.security-feature:hover i {
+    transform: scale(1.1);
+}
+
+.security-feature h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.security-feature p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.payment-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
+}
+
+.info-card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover i {
+    transform: scale(1.1);
+}
+
+.info-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.info-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Add animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
         opacity: 1;
+        transform: translateY(0);
     }
+}
 
-    /* Facebook specific */
-    .social-link .fa-facebook {
-        color: #1877f2;
-        transition: all 0.4s ease;
-    }
+.payment-method-card,
+.security-feature,
+.info-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
 
-    .social-link:hover .fa-facebook {
-        color: white;
-        text-shadow: 0 0 10px rgba(24, 119, 242, 0.5);
-    }
+.payment-method-card:nth-child(2) {
+    animation-delay: 0.1s;
+}
 
-    /* Instagram specific */
-    .social-link .fa-instagram {
-        background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        transition: all 0.4s ease;
-    }
+.payment-method-card:nth-child(3) {
+    animation-delay: 0.2s;
+}
 
-    .social-link:hover .fa-instagram {
-        -webkit-text-fill-color: white;
-        text-shadow: 0 0 10px rgba(220, 39, 67, 0.5);
-    }
+.payment-method-card:nth-child(4) {
+    animation-delay: 0.3s;
+}
 
-    /* Twitter specific */
-    .social-link .fa-twitter {
-        color: #1da1f2;
-        transition: all 0.4s ease;
-    }
-
-    .social-link:hover .fa-twitter {
-        color: white;
-        text-shadow: 0 0 10px rgba(29, 161, 242, 0.5);
-    }
-
-
-    /* Add pulse animation */
-    @keyframes socialPulse {
-        0% {
-            box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0.4);
-        }
-
-        70% {
-            box-shadow: 0 0 0 10px rgba(var(--accent-color-rgb), 0);
-        }
-
-        100% {
-            box-shadow: 0 0 0 0 rgba(var(--accent-color-rgb), 0);
-        }
-    }
-
-    .social-link:hover {
-        animation: socialPulse 1.5s infinite;
-    }
-
-    /* Add floating animation */
-    @keyframes float {
-        0% {
-            transform: translateY(0px);
-        }
-
-        50% {
-            transform: translateY(-5px);
-        }
-
-        100% {
-            transform: translateY(0px);
-        }
-    }
-
-    .social-link {
-        animation: float 3s ease-in-out infinite;
-    }
-
-    .social-link:hover {
-        animation: none;
-    }
-
-    /* Payment Section Styles */
+/* Responsive Styles */
+@media (max-width: 768px) {
     .payment {
-        padding: 5rem 2rem;
-        background: var(--bg-color);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .payment::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        background: var(--gradient-secondary);
-        opacity: 0.05;
-        z-index: 0;
-    }
-
-    .payment-header {
-        text-align: center;
-        margin-bottom: 4rem;
-        position: relative;
-        z-index: 1;
+        padding: 3rem 1rem;
     }
 
     .payment-header h2 {
-        font-size: 2.5rem;
-        color: var(--text-color);
-        margin-bottom: 1rem;
-        background: var(--gradient-primary);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        font-size: 2rem;
     }
 
-    .payment-header p {
-        color: var(--text-color);
-        opacity: 0.8;
-        font-size: 1.1rem;
-    }
-
-    .payment-container {
-        max-width: 100%;
-        width: 90%;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-    }
-
-    .payment-methods-grid {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        max-width: 100%;
-        width: 90%;
-        gap: 2rem;
-        margin-bottom: 4rem;
-    }
-
-    .payment-method-card {
-        flex: 1 1 250px;
-        background: var(--card-bg);
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .payment-method-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--gradient-primary);
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 0;
-    }
-
-    .payment-method-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
-    }
-
-    .payment-method-card i {
-        font-size: 3rem;
-        margin-bottom: 1rem;
-        position: relative;
-        z-index: 1;
-        transition: all 0.3s ease;
-    }
-
-
-    .payment-method-card i:hover {
-        transform: translateY(-5px);
-        color: #EB001B;
-    }
-
-    .payment-method-card h3 {
-        font-size: 1.3rem;
-        color: var(--text-color);
-        margin-bottom: 0.5rem;
-        position: relative;
-        z-index: 1;
-    }
-
-    .payment-method-card p {
-        color: var(--text-color);
-        opacity: 0.8;
-        position: relative;
-        z-index: 1;
-    }
-
-    .payment-security {
-        margin-bottom: 4rem;
-    }
-
-    .security-features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-
-    .security-feature {
-        background: var(--card-bg);
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .security-feature:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
-    }
-
-    .security-feature i {
-        font-size: 2.5rem;
-        color: var(--accent-color);
-        margin-bottom: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .security-feature:hover i {
-        transform: scale(1.1);
-    }
-
-    .security-feature h3 {
-        font-size: 1.3rem;
-        color: var(--text-color);
-        margin-bottom: 0.5rem;
-    }
-
-    .security-feature p {
-        color: var(--text-color);
-        opacity: 0.8;
-    }
-
+    .payment-methods-grid,
+    .security-features,
     .payment-info {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-
-    .info-card {
-        background: var(--card-bg);
-        padding: 2rem;
-        border-radius: 15px;
-        text-align: center;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    }
-
-    .info-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
-    }
-
-    .info-card i {
-        font-size: 2.5rem;
-        color: var(--accent-color);
-        margin-bottom: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .info-card:hover i {
-        transform: scale(1.1);
-    }
-
-    .info-card h3 {
-        font-size: 1.3rem;
-        color: var(--text-color);
-        margin-bottom: 0.5rem;
-    }
-
-    .info-card p {
-        color: var(--text-color);
-        opacity: 0.8;
-    }
-
-    /* Add animations */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        gap: 1.5rem;
     }
 
     .payment-method-card,
     .security-feature,
     .info-card {
-        animation: fadeInUp 0.5s ease forwards;
-    }
-
-    .payment-method-card:nth-child(2) {
-        animation-delay: 0.1s;
-    }
-
-    .payment-method-card:nth-child(3) {
-        animation-delay: 0.2s;
-    }
-
-    .payment-method-card:nth-child(4) {
-        animation-delay: 0.3s;
-    }
-
-    /* Responsive Styles */
-    @media (max-width: 768px) {
-        .payment {
-            padding: 3rem 1rem;
-        }
-
-        .payment-header h2 {
-            font-size: 2rem;
-        }
-
-        .payment-methods-grid,
-        .security-features,
-        .payment-info {
-            gap: 1.5rem;
-        }
-
-        .payment-method-card,
-        .security-feature,
-        .info-card {
-            padding: 1.5rem;
-        }
+        padding: 1.5rem;
     }
 }
