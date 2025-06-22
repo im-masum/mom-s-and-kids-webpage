@@ -51,6 +51,41 @@
     --section-bg: linear-gradient(to bottom, #1e1e1e, #121212);
     --footer-bg: linear-gradient(to bottom, #1e1e1e, #121212);
 }
+/* Dark mode specific styles */
+[data-theme="dark"] .hero::before {
+    filter: brightness(0.7) contrast(1.2);
+}
+
+[data-theme="dark"] .hero-feature {
+    background: rgba(30, 30, 30, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .feature,
+[data-theme="dark"] .testimonial,
+[data-theme="dark"] .cart {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+}
+
+[data-theme="dark"] input,
+[data-theme="dark"] textarea {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .dark-toggle {
+    background: var(--nav-bg);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="dark"] .dark-toggle:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+}
 
 /* Reset & Base */
 * {
@@ -1274,7 +1309,7 @@ nav.scrolled {
     font-weight: bold;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color:var(--accent);
     margin-bottom: 0.5rem;
 }
 
@@ -2082,41 +2117,6 @@ nav.scrolled {
     }
 }
 
-/* Dark mode specific styles */
-[data-theme="dark"] .hero::before {
-    filter: brightness(0.7) contrast(1.2);
-}
-
-[data-theme="dark"] .hero-feature {
-    background: rgba(30, 30, 30, 0.4);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-[data-theme="dark"] .feature,
-[data-theme="dark"] .testimonial,
-[data-theme="dark"] .cart {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-}
-
-[data-theme="dark"] input,
-[data-theme="dark"] textarea {
-    background: var(--card-bg);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-}
-
-[data-theme="dark"] .dark-toggle {
-    background: var(--nav-bg);
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-[data-theme="dark"] .dark-toggle:hover {
-    background: var(--accent);
-    color: var(--bg-color);
-}
 
 /* Product Pages Styles */
 .products-page {
