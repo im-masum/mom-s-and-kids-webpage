@@ -1457,8 +1457,6 @@ nav.scrolled {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     animation: fadeInDown 0.5s ease;
 }
 
@@ -2578,8 +2576,6 @@ nav.scrolled {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     animation: fadeInDown 0.5s ease;
 }
 
@@ -2920,6 +2916,10 @@ nav.scrolled {
 
 /* Testimonials Section Styles */
 .testimonials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 5rem 2rem;
     background: var(--bg-color);
     position: relative;
@@ -2949,9 +2949,7 @@ nav.scrolled {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
-    /* animation: fadeInDown 0.5s ease; */
+    animation: fadeInDown 0.5s ease;
 }
 
 .testimonials-header p {
@@ -3118,9 +3116,7 @@ nav.scrolled {
 .stat-number {
     font-size: 2.5rem;
     font-weight: bold;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--accent-color);
     margin-bottom: 0.5rem;
 }
 
