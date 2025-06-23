@@ -990,6 +990,7 @@ nav.scrolled {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
     gap: 1rem;
     max-width: 1200px;
     width: 100%;
@@ -1139,8 +1140,6 @@ nav.scrolled {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     animation: fadeInDown 0.5s ease;
 }
 
