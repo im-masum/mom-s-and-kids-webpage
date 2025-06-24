@@ -1405,11 +1405,13 @@ nav.scrolled {
     }
 
     .values-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
     }
 
     .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        display: flex;
+        flex-direction: column;
     }
 
     .member-image {
@@ -1418,6 +1420,7 @@ nav.scrolled {
     }
 
     .about-achievements {
+        
         padding: 1rem;
     }
 
