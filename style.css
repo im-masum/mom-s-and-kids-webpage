@@ -1267,7 +1267,7 @@ nav.scrolled {
     font-size: 0.9rem;
 }
 
-.about-team{
+.about-team {
     text-align: center;
     margin: 20px 0;
 }
@@ -2808,10 +2808,15 @@ nav.scrolled {
 
 .feature {
     display: flex;
+    max-width: 800px;
+    width: 100%;
     align-items: center;
     gap: 1rem;
     color: var(--text-color);
     opacity: 0.8;
+    padding: min(.2rem, 8%) 1rem;
+    border-radius: 8px;
+
 }
 
 .feature i {
@@ -2934,6 +2939,7 @@ nav.scrolled {
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
+    
 }
 
 .testimonials::before {
@@ -2984,33 +2990,12 @@ nav.scrolled {
     align-items: stretch;
     position: relative;
     z-index: 1;
+    border-radius: 10px;
+    padding: min(1rem, 8%) 1rem;
 }
 
 .testimonial-card {
-    flex: 1 1 340px;
-    max-width: 400px;
-    min-width: 280px;
-}
-
-@media (max-width: 900px) {
-    .testimonials-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 1.5rem;
-        padding: 0 0.5rem;
-    }
-
-    .testimonial-card {
-        min-width: 85vw;
-        max-width: 95vw;
-        flex: 0 0 auto;
-    }
-}
-
-.testimonial-card {
-    background: rgba(255, 255, 255, 0.22);
+    background: var(--card-bg);
     border-radius: 22px;
     box-shadow: 0 8px 32px rgba(40, 62, 86, 0.10);
     border: 1.5px solid rgba(255, 255, 255, 0.18);
@@ -3026,6 +3011,25 @@ nav.scrolled {
     transform: translateY(40px) scale(0.98);
     animation: testimonialIn 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
+
+
+@media (max-width: 900px) {
+    .testimonials-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .testimonial-card {
+        min-width: 100%;
+        max-width: 100%;
+        flex: 0 0 auto;
+    }
+}
+
 
 .testimonial-card:nth-child(1) {
     animation-delay: 0.1s;
