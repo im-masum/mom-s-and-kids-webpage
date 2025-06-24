@@ -2561,6 +2561,8 @@ nav.scrolled {
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
+    border-radius: 20px;
+    margin: 0 1rem;
 }
 
 .cart::before {
