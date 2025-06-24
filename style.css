@@ -3120,11 +3120,17 @@ nav.scrolled {
 
 .testimonials-stats {
     display: flex;
+    max-width: 1200px;
+    width: 100%;
     justify-content: center;
+    align-items: center;
     gap: 4rem;
     margin-bottom: 4rem;
     position: relative;
     z-index: 1;
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: min(1rem, 8%) 1rem;
 }
 
 .stat-item {
