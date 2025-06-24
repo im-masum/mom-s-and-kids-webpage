@@ -1390,7 +1390,7 @@ nav.scrolled {
 /* Responsive Styles */
 @media (max-width: 768px) {
     .about {
-        padding: 3rem 1rem;
+        padding: min(1rem, 8%) 1rem;
     }
 
     .about-header h2 {
@@ -1425,12 +1425,14 @@ nav.scrolled {
     }
 
     .about-achievements {
-
+        display: flex;
+        flex-direction: column;
         padding: 1rem;
     }
 
     .achievement-number {
         font-size: 2rem;
+
     }
 }
 
