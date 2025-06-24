@@ -1336,7 +1336,7 @@ nav.scrolled {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 2rem;
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: 2rem;
     background: var(--card-bg);
     border-radius: 15px;
