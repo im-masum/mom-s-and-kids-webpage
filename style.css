@@ -1111,7 +1111,7 @@ nav.scrolled {
 
 /* About Section Styles */
 .about {
-    padding: 5rem 2rem;
+    padding: min(1rem, 8%) 1rem;
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
@@ -1215,6 +1215,7 @@ nav.scrolled {
     color: var(--text-color);
     opacity: 0.8;
     line-height: 1.8;
+    font-size: clamp();
 }
 
 .values-grid {
@@ -1282,6 +1283,10 @@ nav.scrolled {
 
 
 .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: min(1rem, 8%) 1rem;
     background: var(--card-bg);
@@ -1420,7 +1425,7 @@ nav.scrolled {
     }
 
     .about-achievements {
-        
+
         padding: 1rem;
     }
 
