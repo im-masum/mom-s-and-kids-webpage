@@ -1693,8 +1693,8 @@ nav.scrolled {
     font-size: 1.8rem;
     font-weight: bold;
     background: var(--gradient-primary);
-    /* -webkit-background-clip: text; */
-    /* -webkit-text-fill-color: transparent; */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--accent-color-rgb);
     margin-bottom: 1rem;
     display: block;
 }
@@ -2948,6 +2948,7 @@ nav.scrolled {
     z-index: 0;
 }
 
+
 .testimonials-header {
     text-align: center;
     margin-bottom: 4rem;
@@ -2972,6 +2973,8 @@ nav.scrolled {
 /* --- TESTIMONIALS CONTAINER FLEX ENHANCEMENT --- */
 .testimonials-container {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 2.5rem;
     margin: 3rem 0 2rem 0;
@@ -2991,8 +2994,10 @@ nav.scrolled {
 
 @media (max-width: 900px) {
     .testimonials-container {
-        flex-wrap: nowrap;
-        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         gap: 1.5rem;
         padding: 0 0.5rem;
     }
