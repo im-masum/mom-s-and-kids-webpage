@@ -2037,11 +2037,15 @@ nav.scrolled {
 
 .app-link i {
     font-size: 1.5rem;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--accent-color);
+    /* Add accent color to icon */
 }
 
 .app-link:hover i {
     transform: scale(1.1);
+    color: #fff;
+    /* Change icon color on hover for contrast */
 }
 
 /* Responsive Styles */
@@ -2941,7 +2945,7 @@ nav.scrolled {
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
-    
+
 }
 
 .testimonials::before {
@@ -3619,4 +3623,20 @@ nav.scrolled {
     .info-card {
         padding: 1.5rem;
     }
+}
+
+.app-link .fa-google-play {
+    background: linear-gradient(45deg, #00c3ff 0%, #ffff1c 40%, #ff5e62 70%, #ff5e62 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.app-link:hover .fa-google-play {
+    filter: brightness(1.2) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
+    transform: scale(1.15) rotate(-8deg);
+    -webkit-text-fill-color: #fff;
+    text-fill-color: #fff;
 }
