@@ -514,10 +514,10 @@ nav.scrolled {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100dvh;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
-    padding: min(2rem, 16%) 1rem;
+    padding: min(4rem, 16%) 1rem;
     margin: 20px;
     max-width: 100%;
     width: 100%;
@@ -1172,6 +1172,8 @@ nav.scrolled {
 
 /* About Section Styles */
 .about {
+    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1181,6 +1183,7 @@ nav.scrolled {
     position: relative;
     overflow: hidden;
     margin: 20px;
+    border-radius: 20px;
 }
 
 .about::before {
