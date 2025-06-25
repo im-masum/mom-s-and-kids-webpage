@@ -1507,10 +1507,18 @@ nav.scrolled {
 
 /* Contact Section Styles */
 .contact {
-    padding: 5rem 2rem;
-    background: var(--bg-color);
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: min(2rem, 16%) 1rem;
+    background: var(--bg-dark);
     position: relative;
     overflow: hidden;
+    margin: 20px;
+    border-radius: 20px;
 }
 
 .contact::before {
@@ -2630,12 +2638,18 @@ nav.scrolled {
 
 /* Cart Section Styles */
 .cart {
-    padding: 5rem 2rem;
-    background: var(--bg-color);
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: min(2rem, 16%) 1rem;
+    background: var(--bg-dark);
     position: relative;
     overflow: hidden;
     border-radius: 20px;
-    margin: 0 1rem;
+    margin: 20px;
 }
 
 .cart::before {
@@ -2675,10 +2689,14 @@ nav.scrolled {
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+    margin: 20px;
+    background: var(--bg-dark);
     position: relative;
     z-index: 1;
+    padding: min(2rem, 16%) 1rem;
+    border-radius: 20px;
 }
 
 .cart-items {
