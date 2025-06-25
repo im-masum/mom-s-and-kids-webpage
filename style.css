@@ -1172,10 +1172,15 @@ nav.scrolled {
 
 /* About Section Styles */
 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: min(1rem, 8%) 1rem;
-    background: var(--bg-color);
+    background: var(--bg-dark);
     position: relative;
     overflow: hidden;
+    margin: 20px;
 }
 
 .about::before {
