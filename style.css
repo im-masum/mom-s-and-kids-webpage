@@ -518,9 +518,11 @@ nav.scrolled {
     position: relative;
     overflow: hidden;
     padding: min(2rem, 16%) 1rem;
-    margin: 4rem auto;
+    margin: 20px;
     max-width: 100%;
     width: 100%;
+    background: var(--bg-dark);
+    border-radius: 20px;
 
 
 }
@@ -1000,13 +1002,15 @@ nav.scrolled {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: min(1rem, 10%) 1rem;
-    margin: 1rem auto;
-    background: var(--bg-color);
+    padding: min(1rem, 8%) 1rem;
+    background: var(--bg-dark);
     position: relative;
     overflow: hidden;
     max-width: 100%;
     width: 100%;
+    margin-top: 50px;
+    border-radius: 20px;
+    margin: 0 20px;
 }
 
 .features::before {
@@ -1053,6 +1057,7 @@ nav.scrolled {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    border-radius: 20px;
 }
 
 .feature-card {
