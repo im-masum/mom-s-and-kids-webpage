@@ -521,7 +521,6 @@ nav.scrolled {
     margin: 20px;
     max-width: 100%;
     width: 100%;
-    background: var(--bg-dark);
     border-radius: 20px;
 
 
@@ -1003,7 +1002,7 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     padding: min(1rem, 8%) 1rem;
-    background: var(--bg-dark);
+    background: var(--bg-color);
     position: relative;
     overflow: hidden;
     max-width: 100%;
@@ -1179,7 +1178,7 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     padding: min(1rem, 8%) 1rem;
-    background: var(--bg-dark);
+    background: var(--bg-color);
     position: relative;
     overflow: hidden;
     margin: 20px;
@@ -1514,7 +1513,7 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     padding: min(2rem, 16%) 1rem;
-    background: var(--bg-dark);
+    background: var(--bg-color);
     position: relative;
     overflow: hidden;
     margin: 20px;
@@ -2645,13 +2644,13 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     padding: min(2rem, 16%) 1rem;
-    background: var(--bg-dark);
+    background: var(--bg-color);
     position: relative;
     overflow: hidden;
     border-radius: 20px;
     margin: 20px;
 }
-
+ 
 .cart::before {
     content: '';
     position: absolute;
@@ -2662,7 +2661,7 @@ nav.scrolled {
     background: var(--gradient-secondary);
     opacity: 0.05;
     z-index: 0;
-}
+} 
 
 .cart-header {
     text-align: center;
@@ -2692,7 +2691,7 @@ nav.scrolled {
     max-width: 100%;
     width: 100%;
     margin: 20px;
-    background: var(--bg-dark);
+    background: var(--bg-color);
     position: relative;
     z-index: 1;
     padding: min(2rem, 16%) 1rem;
