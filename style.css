@@ -862,20 +862,76 @@ nav.scrolled {
 
 .hero-scroll {
     position: absolute;
-    bottom: 1rem;
+    bottom: -20px;
     left: 50%;
-    right: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    animation: bounce 2s infinite;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2rem;
+    padding: min(.1rem, 4%) 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.10);
+    backdrop-filter: blur(6px);
     cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+    z-index: 2;
+    animation: heroScrollPulse 2.5s infinite;
+}
+
+.hero-scroll:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.18);
+}
+
+.hero-scroll span {
+    font-size: 1rem;
+    color: var(--accent-color);
+    font-weight: 600;
+    letter-spacing: 0.5px;
 }
 
 .scroll-arrow {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ffb347 0%, #ff6b6b 50%, #4ecdc4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    filter: drop-shadow(0 2px 8px #ff6b6b44);
+    animation: scrollArrowGlow 1.2s infinite alternate, bounce 2s infinite;
+    transition: transform 0.3s;
+}
+
+.hero-scroll:hover .scroll-arrow {
+    transform: scale(1.2) translateY(4px);
+    filter: drop-shadow(0 4px 16px #ff6b6b88);
+}
+
+@keyframes scrollArrowGlow {
+    0% {
+        filter: drop-shadow(0 2px 8px #ffb34744);
+    }
+
+    100% {
+        filter: drop-shadow(0 6px 24px #4ecdc488);
+    }
+}
+
+@keyframes heroScrollPulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.15);
+    }
+
+    70% {
+        box-shadow: 0 0 0 16px rgba(255, 107, 107, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.15);
+    }
 }
 
 @keyframes bounce {
@@ -3639,4 +3695,55 @@ nav.scrolled {
     transform: scale(1.15) rotate(-8deg);
     -webkit-text-fill-color: #fff;
     text-fill-color: #fff;
+}
+
+.badge {
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    padding: 0.3em 0.8em;
+    font-size: 0.85em;
+    font-weight: 700;
+    border-radius: 12px;
+    background: var(--accent-color);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.5s;
+}
+
+.badge-new {
+    background: linear-gradient(90deg, #ffb347 0%, #ff6b6b 100%);
+}
+
+.badge-featured {
+    background: linear-gradient(90deg, #4ecdc4 0%, #ff6b6b 100%);
+}
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 32px rgba(40, 62, 86, 0.18);
+    transform: translateY(-8px) scale(1.03);
+    z-index: 2;
+}
+
+.nav-link.active {
+    color: #fff;
+    background: var(--accent-color);
+    font-weight: 700;
+    box-shadow: 0 2px 12px rgba(255, 107, 107, 0.10);
+    text-decoration: underline;
+}
+
+.dropdown .nav-link.active {
+    background: var(--accent-color);
+    color: #fff;
+    font-weight: 700;
 }
