@@ -3011,7 +3011,7 @@ nav.scrolled {
     .cart-header p {
         font-size: 1rem;
     }
-
+    
     .cart-container {
         gap: 2rem;
     }
@@ -3038,10 +3038,13 @@ nav.scrolled {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5rem 2rem;
+    padding: min(1rem, 8%) 1rem;
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
+    max-width: 100%;
+    width: 100%;
+
 
 }
 
@@ -3089,8 +3092,6 @@ nav.scrolled {
     margin: 3rem 0 2rem 0;
     width: 100%;
     max-width: 1200px;
-    justify-content: center;
-    align-items: stretch;
     position: relative;
     z-index: 1;
     border-radius: 10px;
@@ -3106,7 +3107,7 @@ nav.scrolled {
     padding: 2.2rem 2rem 1.5rem 2rem;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     justify-content: space-between;
     transition: box-shadow 0.3s, transform 0.3s, border 0.3s;
     position: relative;
