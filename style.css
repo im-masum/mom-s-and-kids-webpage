@@ -709,11 +709,11 @@ nav.scrolled {
     gap: 3rem;
     margin-top: 2rem;
     padding: min(1rem, 8%) 0;
-    /* background: rgba(255, 255, 255, 0.1); */
-    /* backdrop-filter: blur(10px); */
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
-    /* box-shadow: 0 8px 32px rgba(34, 33, 33, 0.1); */
-    /* border: 1px solid rgba(255, 255, 255, 0.2); */
+    box-shadow: 0 8px 32px rgba(34, 33, 33, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
 
 }
@@ -863,7 +863,7 @@ nav.scrolled {
 
 .hero-scroll {
     position: absolute;
-    bottom: -20px;
+    bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
