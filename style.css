@@ -3526,7 +3526,6 @@ nav.scrolled {
 }
 
 .payment-method-card {
-    /* flex: 1 1 250px; */
     max-width: 350px;
     height: 250px;
     width: 100%;
