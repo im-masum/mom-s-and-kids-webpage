@@ -3274,10 +3274,11 @@ nav.scrolled {
 .cta-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: var(--gradient-primary);
-    color: white;
+    padding: min(1rem, 8%) 1.5rem;
+    background: var(--bg-secondary);
+    color: var(--accent);
     border-radius: 10px;
     text-decoration: none;
     font-weight: 600;
