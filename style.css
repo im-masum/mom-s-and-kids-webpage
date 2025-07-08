@@ -3101,7 +3101,7 @@ nav.scrolled {
 
 .testimonial-card {
     width: 100%;
-    max-width: 100%;
+    max-width: 50%;
     background: var(--card-bg);
     border-radius: 22px;
     box-shadow: 0 8px 32px rgba(40, 62, 86, 0.10);
