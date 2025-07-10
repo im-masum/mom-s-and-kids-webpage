@@ -343,7 +343,7 @@ nav.scrolled {
     }
 
 
-     .dropdown {
+    .dropdown {
         position: absolute;
         box-shadow: none;
         opacity: 1;
@@ -354,10 +354,7 @@ nav.scrolled {
 
     .dropdown-container:hover .dropdown {
         display: block;
-    } 
-
-
-
+    }
 
 
 }
@@ -3503,19 +3500,68 @@ nav.scrolled {
     margin-bottom: 4rem;
     position: relative;
     z-index: 1;
+    padding: 3rem 2rem 2.5rem 2rem;
+    background: linear-gradient(90deg, #fff6e0 0%, #ffe0e9 100%);
+    border-radius: 2rem;
+    box-shadow: 0 6px 32px 0 rgba(255, 107, 107, 0.08), 0 1.5px 8px 0 rgba(78, 205, 196, 0.08);
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+[data-theme="dark"] .payment-header {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    box-shadow: 0 6px 32px 0 rgba(255, 133, 133, 0.12), 0 1.5px 8px 0 rgba(78, 205, 196, 0.12);
+}
+
+.payment-header .payment-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    color: var(--accent-color);
+    animation: paymentPulse 1.5s infinite;
 }
 
 .payment-header h2 {
-    font-size: 2.5rem;
-    color: var(--text-color);
+    font-size: 2.8rem;
+    font-weight: 800;
     margin-bottom: 1rem;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, #ff6b6b 0%, #f7d427 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    letter-spacing: 1px;
+    animation: fadeInDown 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .payment-header p {
     color: var(--text-color);
-    opacity: 0.8;
-    font-size: 1.1rem;
+    opacity: 0.85;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeInUp 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (max-width: 768px) {
+    .payment-header {
+        padding: 2rem 1rem 2rem 1rem;
+        border-radius: 1.2rem;
+    }
+
+    .payment-header h2 {
+        font-size: 2rem;
+    }
+
+    .payment-header p {
+        font-size: 1rem;
+    }
+
+    .payment-header .payment-icon {
+        font-size: 2.2rem;
+    }
 }
 
 .payment-container {
