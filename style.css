@@ -3588,207 +3588,123 @@ nav.scrolled {
     max-width: 350px;
     height: 250px;
     width: 100%;
-    background: var(--card-bg);
+    background: linear-gradient(135deg, #fff6e0 0%, #ffe0e9 100%);
     padding: 2rem;
-    border-radius: 15px;
+    border-radius: 20px;
     text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 32px 0 rgba(255, 107, 107, 0.08), 0 1.5px 8px 0 rgba(78, 205, 196, 0.08);
     position: relative;
     overflow: hidden;
+    border: 2px solid transparent;
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.payment-method-card::before {
+[data-theme="dark"] .payment-method-card {
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    box-shadow: 0 8px 32px 0 rgba(255, 133, 133, 0.12), 0 1.5px 8px 0 rgba(78, 205, 196, 0.12);
+}
+
+.payment-method-card::after {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: -75%;
+    width: 50%;
     height: 100%;
-    background: var(--gradient-primary);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.01) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
 }
 
 .payment-method-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 48px 0 rgba(255, 107, 107, 0.16), 0 3px 16px 0 rgba(78, 205, 196, 0.16);
+    border: 2px solid var(--accent-color);
+}
+
+.payment-method-card:hover::after {
+    left: 120%;
+}
+
+.payment-method-card .badge-popular {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: linear-gradient(90deg, #ffb347 0%, #ff6b6b 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.3em 1em;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.5s;
 }
 
 .payment-method-card i {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 3.2rem;
+    margin-bottom: 1.2rem;
     position: relative;
     z-index: 1;
-    transition: all 0.3s ease;
+    color: var(--accent-color);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: paymentFloat 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(255, 107, 107, 0.08));
 }
 
-
-.payment-method-card i:hover {
-    transform: translateY(-5px);
-    color: #EB001B;
+.payment-method-card:hover i {
+    color: #f7d427;
+    transform: scale(1.15) translateY(-8px) rotate(-8deg);
+    filter: drop-shadow(0 4px 16px #ff6b6b44);
 }
 
 .payment-method-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     color: var(--text-color);
     margin-bottom: 0.5rem;
     position: relative;
     z-index: 1;
+    font-weight: 700;
+    letter-spacing: 0.5px;
 }
 
 .payment-method-card p {
     color: var(--text-color);
-    opacity: 0.8;
+    opacity: 0.85;
     position: relative;
     z-index: 1;
+    font-size: 1.05rem;
+    margin-bottom: 0;
 }
 
-.payment-security {
-    margin-bottom: 4rem;
-}
-
-.security-features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.security-feature {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-.security-feature:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
-}
-
-.security-feature i {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-}
-
-.security-feature:hover i {
-    transform: scale(1.1);
-}
-
-.security-feature h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.security-feature p {
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-.payment-info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.info-card {
-    max-width: 450px;
-    width: 100%;
-    height: 300px;
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(var(--accent-color-rgb), 0.1);
-}
-
-.info-card i {
-    font-size: 2.5rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
-}
-
-.info-card:hover i {
-    transform: scale(1.1);
-}
-
-.info-card h3 {
-    font-size: 1.3rem;
-    color: var(--text-color);
-    margin-bottom: 0.5rem;
-}
-
-.info-card p {
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-/* Add animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.payment-method-card,
-.security-feature,
-.info-card {
-    animation: fadeInUp 0.5s ease forwards;
-}
-
-.payment-method-card:nth-child(2) {
-    animation-delay: 0.1s;
-}
-
-.payment-method-card:nth-child(3) {
-    animation-delay: 0.2s;
-}
-
-.payment-method-card:nth-child(4) {
-    animation-delay: 0.3s;
-}
-
-/* Responsive Styles */
 @media (max-width: 768px) {
-    .payment {
-        padding: 3rem 1rem;
+    .payment-method-card {
+        padding: 1.2rem;
+        border-radius: 14px;
+        height: 200px;
     }
 
-    .payment-header h2 {
+    .payment-method-card i {
         font-size: 2rem;
+        margin-bottom: 0.7rem;
     }
 
-    .payment-methods-grid,
-    .security-features,
-    .payment-info {
-        gap: 1.5rem;
+    .payment-method-card h3 {
+        font-size: 1.1rem;
     }
 
-    .payment-method-card,
-    .security-feature,
-    .info-card {
-        padding: 1.5rem;
+    .payment-method-card p {
+        font-size: 0.95rem;
+    }
+
+    .payment-method-card .badge-popular {
+        font-size: 0.7rem;
+        padding: 0.2em 0.7em;
+        top: 10px;
+        right: 10px;
     }
 }
 
