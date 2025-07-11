@@ -3524,7 +3524,7 @@ nav.scrolled {
 }
 
 .payment-header h2 {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 800;
     margin-bottom: 1rem;
     background: linear-gradient(90deg, #ff6b6b 0%, #f7d427 100%);
@@ -3566,7 +3566,7 @@ nav.scrolled {
 
 .payment-container {
     max-width: 100%;
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -3579,13 +3579,13 @@ nav.scrolled {
     justify-content: center;
     margin: 0 auto;
     max-width: 100%;
-    width: 90%;
+    width: 95%;
     gap: 2rem;
     margin-bottom: 4rem;
 }
 
 .payment-method-card {
-    max-width: 350px;
+    max-width: 300px;
     height: 250px;
     width: 100%;
     background: linear-gradient(135deg, #fff6e0 0%, #ffe0e9 100%);
