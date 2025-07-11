@@ -3501,7 +3501,7 @@ nav.scrolled {
     position: relative;
     z-index: 1;
     padding: 3rem 2rem 2.5rem 2rem;
-    background: linear-gradient(90deg, #fff6e0 0%, #ffe0e9 100%);
+    background: linear-gradient(135deg, #fff6e0 0%, #ffe0e9 100%);
     border-radius: 2rem;
     box-shadow: 0 6px 32px 0 rgba(255, 107, 107, 0.08), 0 1.5px 8px 0 rgba(78, 205, 196, 0.08);
     animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -3509,7 +3509,7 @@ nav.scrolled {
 }
 
 [data-theme="dark"] .payment-header {
-    background: linear-gradient(90deg, #232526 0%, #414345 100%);
+    background: linear-gradient(135deg, #232526 0%, #414345 100%);
     box-shadow: 0 6px 32px 0 rgba(255, 133, 133, 0.12), 0 1.5px 8px 0 rgba(78, 205, 196, 0.12);
 }
 
