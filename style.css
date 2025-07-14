@@ -794,7 +794,7 @@ nav.scrolled {
     transition: all 0.3s ease;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--text-dark);
+    -webkit-text-fill-color: var(--text-color);
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
