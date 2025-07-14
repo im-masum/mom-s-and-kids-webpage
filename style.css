@@ -1582,42 +1582,110 @@ nav.scrolled {
 }
 
 .info-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 300px;
+    max-width: 350px;
     width: 100%;
-    background: var(--card-bg);
-    padding: min(1rem, 8%) 1rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px var(--nav-shadow);
+    min-height: 220px;
+    background: linear-gradient(120deg, #e0f7fa 0%, #fff6e0 100%);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 20px;
     text-align: center;
-    transition: all 0.3s ease;
-    animation: fadeIn 0.5s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 32px 0 rgba(78, 205, 196, 0.10), 0 1.5px 8px 0 rgba(255, 107, 107, 0.08);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 1.2rem;
+}
+
+[data-theme="dark"] .info-card {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    box-shadow: 0 8px 32px 0 rgba(255, 133, 133, 0.12), 0 1.5px 8px 0 rgba(78, 205, 196, 0.12);
+}
+
+.info-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.01) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px var(--nav-shadow);
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 48px 0 rgba(78, 205, 196, 0.18), 0 3px 16px 0 rgba(255, 107, 107, 0.16);
+    border: 2px solid var(--accent-color);
+    z-index: 2;
+}
+
+.info-card:hover::after {
+    left: 120%;
 }
 
 .info-card i {
-    font-size: 2rem;
+    font-size: 2.7rem;
     color: var(--accent-color);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: paymentFloat 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(78, 205, 196, 0.08));
+    z-index: 1;
+}
+
+.info-card:hover i {
+    color: #f7d427;
+    transform: scale(1.12) translateY(-6px) rotate(-6deg);
+    filter: drop-shadow(0 4px 16px #4ecdc444);
 }
 
 .info-card h3 {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
     color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    position: relative;
 }
 
 .info-card p {
     color: var(--text-color);
-    opacity: 0.8;
-    line-height: 1.6;
+    opacity: 0.85;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .payment-info {
+        gap: 1rem;
+    }
+
+    .info-card {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        border-radius: 14px;
+        min-height: 160px;
+    }
+
+    .info-card i {
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .info-card h3 {
+        font-size: 1rem;
+    }
+
+    .info-card p {
+        font-size: 0.95rem;
+    }
 }
 
 .contact-form {
@@ -3913,4 +3981,15 @@ nav.scrolled {
         font-size: 0.85rem;
         margin-top: 0.4rem;
     }
+}
+
+.payment-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
 }
