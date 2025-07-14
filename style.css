@@ -3830,14 +3830,18 @@ nav.scrolled {
     transform: translateY(-8px) scale(1.03);
     z-index: 2;
 }
-.security-features{
+
+.security-features {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 95%;
+    padding: min(1rem, 8%) 2rem;
+    width: 100%;
     max-width: 100%;
-    background: red;
+    gap:2rem;
+
 }
+
 .security-feature {
     max-width: 320px;
     width: 100%;
