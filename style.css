@@ -3310,7 +3310,7 @@ nav.scrolled {
     justify-content: center;
     align-items: center;
     gap: 4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     position: relative;
     z-index: 1;
     background: var(--card-bg);
@@ -3402,7 +3402,7 @@ nav.scrolled {
 
     .testimonials-stats {
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         width: 98%;
     }
 
