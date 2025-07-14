@@ -3185,7 +3185,7 @@ nav.scrolled {
     box-shadow: 0 8px 32px rgba(40, 62, 86, 0.10);
     border: 1.5px solid rgba(255, 255, 255, 0.18);
     backdrop-filter: blur(12px);
-    padding: 2.2rem 2rem 1.5rem 2rem;
+    padding: min(1rem, 8%) 2rem;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -3316,11 +3316,18 @@ nav.scrolled {
     background: var(--card-bg);
     border-radius: 20px;
     padding: min(1rem, 8%) 1rem;
+    box-shadow: 0 8px 32px rgba(40, 62, 86, 0.10);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .stat-item {
+    padding: min(1rem, 8%) 2rem;
     text-align: center;
     animation: fadeInUp 0.5s ease;
+    border-radius: 1rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+
 }
 
 .stat-number {
@@ -3347,6 +3354,7 @@ nav.scrolled {
     color: var(--text-color);
     margin-bottom: 1.5rem;
     animation: fadeIn 0.5s ease;
+
 }
 
 .cta-button {
