@@ -1002,6 +1002,8 @@ nav.scrolled {
     }
 }
 
+
+
 /* Features Section Styles */
 .features {
     display: flex;
@@ -3759,4 +3761,156 @@ nav.scrolled {
     box-shadow: 0 8px 32px rgba(40, 62, 86, 0.18);
     transform: translateY(-8px) scale(1.03);
     z-index: 2;
+}
+
+.security-feature {
+    background: linear-gradient(120deg, #fff6e0 0%, #e0f7fa 100%);
+    padding: 2.2rem 1.5rem 2rem 1.5rem;
+    border-radius: 22px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 8px 32px 0 rgba(78, 205, 196, 0.10), 0 1.5px 8px 0 rgba(255, 107, 107, 0.08);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 1.2rem;
+}
+
+[data-theme="dark"] .security-feature {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    box-shadow: 0 8px 32px 0 rgba(255, 133, 133, 0.12), 0 1.5px 8px 0 rgba(78, 205, 196, 0.12);
+}
+
+.security-feature::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.01) 100%);
+    transform: skewX(-25deg);
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.security-feature:hover {
+    transform: translateY(-10px) scale(1.04);
+    box-shadow: 0 16px 48px 0 rgba(78, 205, 196, 0.18), 0 3px 16px 0 rgba(255, 107, 107, 0.16);
+    border: 2px solid var(--accent-color);
+    z-index: 2;
+}
+
+.security-feature:hover::after {
+    left: 120%;
+}
+
+.security-feature .security-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 2.2rem;
+    height: 2.2rem;
+    background: linear-gradient(135deg, #4ecdc4 60%, #fff6e0 100%);
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(78, 205, 196, 0.12);
+    z-index: 3;
+    animation: bounce 1.2s infinite alternate;
+    border: 2px solid #fff;
+}
+
+.security-feature .security-badge i {
+    color: #fff;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 1px 2px #4ecdc4cc);
+}
+
+.security-feature i:not(.fa-check-circle) {
+    font-size: 2.7rem;
+    color: var(--accent-color);
+    margin-bottom: 1.2rem;
+    margin-top: 0.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: paymentFloat 2.5s ease-in-out infinite;
+    filter: drop-shadow(0 2px 8px rgba(78, 205, 196, 0.08));
+    z-index: 1;
+}
+
+.security-feature:hover i:not(.fa-check-circle) {
+    color: #f7d427;
+    transform: scale(1.12) translateY(-6px) rotate(-6deg);
+    filter: drop-shadow(0 4px 16px #4ecdc444);
+}
+
+.security-feature h3 {
+    font-size: 1.25rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    z-index: 1;
+    position: relative;
+}
+
+.security-feature p {
+    color: var(--text-color);
+    opacity: 0.85;
+    font-size: 1.05rem;
+    margin-bottom: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.security-benefit {
+    display: block;
+    margin-top: 0.7rem;
+    color: #4ecdc4;
+    font-size: 0.98rem;
+    font-style: italic;
+    opacity: 0.85;
+    letter-spacing: 0.1px;
+    text-align: center;
+    animation: fadeInUp 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .security-feature {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        border-radius: 14px;
+    }
+
+    .security-feature .security-badge {
+        width: 1.4rem;
+        height: 1.4rem;
+        top: 10px;
+        left: 10px;
+    }
+
+    .security-feature .security-badge i {
+        font-size: 0.9rem;
+    }
+
+    .security-feature i:not(.fa-check-circle) {
+        font-size: 1.7rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .security-feature h3 {
+        font-size: 1rem;
+    }
+
+    .security-feature p {
+        font-size: 0.95rem;
+    }
+
+    .security-benefit {
+        font-size: 0.85rem;
+        margin-top: 0.4rem;
+    }
 }
