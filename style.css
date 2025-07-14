@@ -3830,8 +3830,17 @@ nav.scrolled {
     transform: translateY(-8px) scale(1.03);
     z-index: 2;
 }
-
+.security-features{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95%;
+    max-width: 100%;
+    background: red;
+}
 .security-feature {
+    max-width: 320px;
+    width: 100%;
     background: linear-gradient(120deg, #fff6e0 0%, #e0f7fa 100%);
     padding: min(1rem, 8%) 2rem;
     border-radius: 22px;
