@@ -1565,7 +1565,7 @@ nav.scrolled {
 .contact-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
+    gap: 2rem;
     max-width: 1200px;
     margin: 0 auto 4rem;
     position: relative;
@@ -1582,11 +1582,11 @@ nav.scrolled {
 }
 
 .info-card {
-    max-width: 350px;
+    max-width: 300px;
     width: 100%;
-    min-height: 220px;
+    height: 250px;
     background: linear-gradient(120deg, #e0f7fa 0%, #fff6e0 100%);
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    padding: min(1rem, 8%) 2rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -3833,7 +3833,7 @@ nav.scrolled {
 
 .security-feature {
     background: linear-gradient(120deg, #fff6e0 0%, #e0f7fa 100%);
-    padding: 2.2rem 1.5rem 2rem 1.5rem;
+    padding: min(1rem, 8%) 2rem;
     border-radius: 22px;
     text-align: center;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
