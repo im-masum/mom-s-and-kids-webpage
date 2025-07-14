@@ -3305,8 +3305,8 @@ nav.scrolled {
 
 .testimonials-stats {
     display: flex;
-    max-width: 1200px;
-    width: 100%;
+    max-width: 1000px;
+    width: 50%;
     justify-content: center;
     align-items: center;
     gap: 4rem;
@@ -3403,6 +3403,7 @@ nav.scrolled {
     .testimonials-stats {
         flex-direction: column;
         gap: 2rem;
+        width: 98%;
     }
 
     .stat-number {
@@ -3838,7 +3839,7 @@ nav.scrolled {
     padding: min(1rem, 8%) 2rem;
     width: 100%;
     max-width: 100%;
-    gap: 1rem;
+    gap: 1.5rem;
 
 }
 
@@ -4007,7 +4008,7 @@ nav.scrolled {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 1.5rem;
     margin: 0 auto;
     max-width: 1000px;
     width: 100%;
