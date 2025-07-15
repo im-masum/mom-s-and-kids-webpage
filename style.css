@@ -2362,7 +2362,7 @@ nav.scrolled {
 }
 
 .products-grid {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -3328,7 +3328,7 @@ nav.scrolled {
     text-align: center;
     animation: fadeInUp 0.5s ease;
     border-radius: 1rem;
-    
+
 }
 
 .stat-number {
@@ -4021,4 +4021,237 @@ nav.scrolled {
     margin: 0 auto;
     max-width: 1000px;
     width: 100%;
+}
+
+/* Kids Products Page Enhancements */
+.kids-hero {
+    background: linear-gradient(120deg, #f7d427 0%, #4ecdc4 100%);
+    color: #fff;
+    padding: 4rem 1rem 3rem 1rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 70px;
+}
+
+.kids-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+.kids-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #fff6e0 0%, #ffe0e9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.kids-hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #fff;
+    opacity: 0.95;
+}
+
+.kids-hero .cta-btn.primary {
+    background: #fff;
+    color: #4ecdc4;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 20px rgba(78, 205, 196, 0.15);
+    transition: all 0.3s;
+}
+
+.kids-hero .cta-btn.primary:hover {
+    background: #ffe0e9;
+    color: #f7d427;
+    transform: translateY(-3px) scale(1.04);
+}
+
+.kids-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: linear-gradient(90deg, #fff6e0 0%, #e0f7fa 100%);
+    padding: 1.5rem 1rem;
+    border-radius: 18px;
+    margin: -2.5rem auto 2.5rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 20px rgba(247, 212, 39, 0.08);
+    position: relative;
+    z-index: 2;
+}
+
+.kids-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #4ecdc4;
+    background: #fff;
+    padding: 0.7rem 1.2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(78, 205, 196, 0.07);
+    transition: background 0.3s, color 0.3s;
+}
+
+.kids-feature i {
+    color: #f7d427;
+    font-size: 1.3rem;
+}
+
+.kids-feature:hover {
+    background: #ffe0e9;
+    color: #f7d427;
+}
+
+.kids-testimonials {
+    background: linear-gradient(120deg, #e0f7fa 0%, #fff6e0 100%);
+    border-radius: 20px;
+    padding: 3rem 1rem 2rem 1rem;
+    margin: 3rem auto 2rem auto;
+    max-width: 1000px;
+    box-shadow: 0 4px 24px rgba(78, 205, 196, 0.08);
+    text-align: center;
+}
+
+.kids-testimonials h2 {
+    font-size: 2rem;
+    color: #4ecdc4;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.kids-testimonials-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.kids-testimonials .testimonial-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(247, 212, 39, 0.08);
+    padding: 2rem 1.5rem 1.2rem 1.5rem;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 1rem;
+}
+
+.kids-testimonials .testimonial-card:hover {
+    box-shadow: 0 8px 32px rgba(247, 212, 39, 0.15);
+    transform: translateY(-6px) scale(1.03);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4ecdc4;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #4ecdc4;
+    font-weight: 700;
+}
+
+.testimonial-author p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #888;
+}
+
+.testimonial-text {
+    font-size: 1.05rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.rating {
+    color: #f7d427;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .kids-testimonials-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kids-features {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .kids-hero h1 {
+        font-size: 2rem;
+    }
+
+    .kids-hero p {
+        font-size: 1rem;
+    }
+
+    .kids-hero .cta-btn.primary {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .kids-features {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+        border-radius: 12px;
+    }
+
+    .kids-feature {
+        font-size: 1rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 8px;
+    }
+
+    .kids-testimonials {
+        padding: 1.5rem 0.5rem 1rem 0.5rem;
+        border-radius: 12px;
+    }
+
+    .kids-testimonials h2 {
+        font-size: 1.2rem;
+    }
+
+    .kids-testimonials .testimonial-card {
+        padding: 1rem 0.7rem 0.7rem 0.7rem;
+        border-radius: 10px;
+        max-width: 100%;
+    }
 }
