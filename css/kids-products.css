@@ -1,0 +1,314 @@
+/* Kids Products Page Custom Styles */
+
+.products-page {
+    background: #f0f8ff;
+}
+
+.page-header {
+    background: linear-gradient(90deg, #4ecdc4 0%, #ffb347 100%);
+    color: #fff;
+    border-radius: 18px;
+    margin: 2rem 0 2.5rem 0;
+    box-shadow: 0 4px 24px rgba(78, 205, 196, 0.08);
+}
+
+.kids-hero {
+    background: linear-gradient(120deg, #f7d427 0%, #4ecdc4 100%);
+    padding: 4rem 1rem 3rem 1rem;
+    border-radius: 2rem;
+    margin: 2rem 0 2.5rem 0;
+    box-shadow: 0 8px 32px rgba(255, 183, 71, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.kids-hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px #4ecdc4aa;
+}
+
+.kids-hero-content p {
+    font-size: 1.3rem;
+    color: #fffbe7;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+}
+
+.kids-hero .cta-btn.primary {
+    background: linear-gradient(90deg, #ffb347 0%, #4ecdc4 100%);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 16px #ffb34744;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.kids-hero .cta-btn.primary:hover {
+    background: linear-gradient(90deg, #4ecdc4 0%, #ffb347 100%);
+    transform: translateY(-3px) scale(1.04);
+}
+
+.kids-features {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 auto 2.5rem auto;
+    flex-wrap: wrap;
+}
+
+.kids-feature {
+    background: #fffbe7;
+    color: #4ecdc4;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px #4ecdc422;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+
+.kids-feature i {
+    color: #ffb347;
+    font-size: 1.3rem;
+}
+
+.kids-feature:hover {
+    background: #4ecdc4;
+    color: #fff;
+    transform: translateY(-4px) scale(1.04);
+}
+
+.kids-feature:hover i {
+    color: #fffbe7;
+}
+
+.products-grid {
+    gap: 2.5rem;
+}
+
+.product-card {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #4ecdc422;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    box-shadow: 0 8px 32px #ffb34733;
+    transform: translateY(-6px) scale(1.03);
+    z-index: 2;
+}
+
+.product-card .badge-featured {
+    background: linear-gradient(90deg, #ffb347 0%, #4ecdc4 100%);
+    color: #fff;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 0.4em 1em;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 2px 8px #ffb34733;
+}
+
+.product-card .badge-new {
+    background: linear-gradient(90deg, #4ecdc4 0%, #ffb347 100%);
+    color: #fff;
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    padding: 0.4em 1em;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    z-index: 2;
+    box-shadow: 0 2px 8px #4ecdc433;
+}
+
+.product-card img {
+    border-radius: 18px 18px 0 0;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.product-card:hover img {
+    transform: scale(1.05);
+}
+
+.product-card h3 {
+    color: #4ecdc4;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 1.2rem 0 0.5rem 0;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+}
+
+.product-card .price {
+    color: #ffb347;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.product-card .add-to-cart {
+    background: linear-gradient(90deg, #4ecdc4 0%, #ffb347 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    margin-bottom: 1rem;
+}
+
+.product-card .add-to-cart:hover {
+    background: linear-gradient(90deg, #ffb347 0%, #4ecdc4 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.kids-testimonials {
+    margin: 3rem 0 2rem 0;
+    text-align: center;
+}
+
+.kids-testimonials h2 {
+    font-size: 2rem;
+    color: #4ecdc4;
+    margin-bottom: 2rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.kids-testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background: #fffbe7;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #ffb34722;
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    max-width: 350px;
+    width: 100%;
+    text-align: left;
+    position: relative;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 8px 32px #4ecdc433;
+    transform: translateY(-4px) scale(1.03);
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.testimonial-author img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #4ecdc4;
+}
+
+.testimonial-author h4 {
+    margin: 0;
+    color: #ffb347;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.testimonial-author p {
+    margin: 0;
+    color: #4ecdc4;
+    font-size: 0.95rem;
+}
+
+.testimonial-text {
+    color: #444;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+}
+
+.rating {
+    color: #ffb347;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .kids-testimonials-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .kids-hero {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+        border-radius: 1.2rem;
+    }
+
+    .kids-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .kids-hero-content p {
+        font-size: 1rem;
+    }
+
+    .kids-features {
+        gap: 1rem;
+    }
+
+    .kids-feature {
+        padding: 0.7rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    .products-grid {
+        gap: 1rem;
+    }
+
+    .testimonial-card {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        border-radius: 12px;
+        max-width: 100%;
+    }
+}
