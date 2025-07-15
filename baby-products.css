@@ -1,0 +1,10 @@
+/* Baby Products Page Custom Styles */
+
+.products-page {
+    background: #fff0fa;
+}
+
+.page-header {
+    background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
+    color: #fff;
+}

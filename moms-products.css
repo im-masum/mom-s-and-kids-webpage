@@ -1,0 +1,10 @@
+/* Moms Products Page Custom Styles */
+
+.products-page {
+    background: #fff8f0;
+}
+
+.page-header {
+    background: linear-gradient(90deg, #f7d427 0%, #ff6b6b 100%);
+    color: #fff;
+}
