@@ -1,4 +1,5 @@
 /* Baby Products Page Custom Styles */
+
 .products-page {
     background: linear-gradient(120deg, #fff0fa 0%, #e0f7fa 100%);
     min-height: 100vh;
@@ -8,11 +9,12 @@
 .products-page .page-header {
     background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
     color: #fff;
-    border-radius: 18px;
+    border-radius: 22px;
     margin: 2rem 0 2.5rem 0;
-    box-shadow: 0 4px 24px rgba(255, 182, 193, 0.08);
+    box-shadow: 0 4px 24px rgba(255, 182, 193, 0.10);
     text-align: center;
     padding: 2.5rem 1rem 2rem 1rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 .products-page .products-grid {
@@ -28,11 +30,11 @@
 
 .products-page .product-card {
     background: #fff;
-    border-radius: 20px;
+    border-radius: 24px;
     box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.10), 0 1.5px 8px 0 rgba(247, 212, 39, 0.08);
     overflow: hidden;
     position: relative;
-    padding: 1.5rem 1rem 1.5rem 1rem;
+    padding: 1.7rem 1.2rem 1.7rem 1.2rem;
     text-align: center;
     transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     border: 2px solid transparent;
@@ -46,24 +48,32 @@
 
 .products-page .product-card img {
     width: 100%;
-    max-width: 180px;
-    height: 140px;
+    max-width: 170px;
+    height: 130px;
     object-fit: cover;
-    border-radius: 14px;
+    border-radius: 16px;
     margin-bottom: 1rem;
     box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
+    transition: transform 0.3s;
+}
+
+.products-page .product-card:hover img {
+    transform: scale(1.05);
 }
 
 .products-page .product-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     margin: 0.5rem 0 0.3rem 0;
-    color: #333;
+    color: #ffb6b9;
+    font-weight: 700;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 .products-page .product-card p {
     font-size: 1rem;
-    color: #666;
+    color: #7b7b7b;
     margin-bottom: 0.7rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 .products-page .price {
@@ -83,10 +93,12 @@
     font-size: 0.85rem;
     font-weight: bold;
     padding: 0.3rem 0.9rem;
-    border-radius: 12px;
+    border-radius: 16px;
     box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
     z-index: 2;
     letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    opacity: 0.95;
 }
 
 .products-page .badge-featured {
@@ -101,7 +113,7 @@
     background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
     color: #fff;
     border: none;
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 0.7rem 1.5rem;
     font-size: 1rem;
     font-weight: bold;
@@ -109,6 +121,7 @@
     cursor: pointer;
     box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
     transition: background 0.2s, transform 0.2s;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
 
 .products-page .add-to-cart:hover {
@@ -143,7 +156,7 @@
 
     .products-page .page-header {
         margin: 1rem 0 1.2rem 0;
-        border-radius: 10px;
+        border-radius: 12px;
     }
 }
 
@@ -160,4 +173,91 @@
 [data-theme="dark"] .products-page .page-header {
     background: linear-gradient(90deg, #232526 0%, #414345 100%);
     color: #fff;
+}
+
+[data-theme="dark"] .products-page .badge {
+    background: linear-gradient(90deg, #f7d427 0%, #ffb6b9 100%);
+    color: #fff;
+}
+
+/* Baby Products Hero Section */
+.baby-hero {
+    background: linear-gradient(120deg, #ffe0f7 0%, #e0f7fa 100%);
+    padding: 4rem 1rem 3rem 1rem;
+    border-radius: 2rem;
+    margin: 2rem 0 2.5rem 0;
+    box-shadow: 0 8px 32px rgba(255, 182, 193, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.baby-hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffb6b9;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px #ffe0f7aa;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.baby-hero-content p {
+    font-size: 1.2rem;
+    color: #7b7b7b;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.baby-hero .cta-btn.primary {
+    background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 16px #ffb6b944;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    border: none;
+    text-decoration: none;
+}
+
+.baby-hero .cta-btn.primary:hover {
+    background: linear-gradient(90deg, #f7d427 0%, #ffb6b9 100%);
+    transform: translateY(-3px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+    .baby-hero {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+        border-radius: 1.2rem;
+    }
+
+    .baby-hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .baby-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+[data-theme="dark"] .baby-hero {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+}
+
+[data-theme="dark"] .baby-hero-content h1 {
+    color: #f7d427;
+    text-shadow: 2px 2px 8px #232526aa;
+}
+
+[data-theme="dark"] .baby-hero-content p {
+    color: #fffbe7;
 }
