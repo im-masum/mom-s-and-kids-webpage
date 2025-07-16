@@ -116,6 +116,88 @@
     transform: scale(1.06);
 }
 
+/* Moms Products Hero Section */
+.moms-hero {
+    background: linear-gradient(120deg, #fff8f0 0%, #ffe0e9 100%);
+    padding: 4rem 1rem 3rem 1rem;
+    border-radius: 2rem;
+    margin: 2rem 0 2.5rem 0;
+    box-shadow: 0 8px 32px rgba(255, 107, 107, 0.10);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.moms-hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ff6b6b;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 8px #ffe0e9aa;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.moms-hero-content p {
+    font-size: 1.2rem;
+    color: #7b7b7b;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+.moms-hero .cta-btn.primary {
+    background: linear-gradient(90deg, #ff6b6b 0%, #f7d427 100%);
+    color: #fff;
+    font-weight: 700;
+    border-radius: 30px;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 16px #ff6b6b44;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    border: none;
+    text-decoration: none;
+}
+
+.moms-hero .cta-btn.primary:hover {
+    background: linear-gradient(90deg, #f7d427 0%, #ff6b6b 100%);
+    transform: translateY(-3px) scale(1.04);
+}
+
+@media (max-width: 900px) {
+    .moms-hero {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+        border-radius: 1.2rem;
+    }
+
+    .moms-hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .moms-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+[data-theme="dark"] .moms-hero {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+}
+
+[data-theme="dark"] .moms-hero-content h1 {
+    color: #f7d427;
+    text-shadow: 2px 2px 8px #232526aa;
+}
+
+[data-theme="dark"] .moms-hero-content p {
+    color: #fffbe7;
+}
+
 @media (max-width: 900px) {
     .products-page .products-flex {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
