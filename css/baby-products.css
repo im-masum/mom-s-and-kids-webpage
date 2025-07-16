@@ -1,10 +1,163 @@
 /* Baby Products Page Custom Styles */
-
 .products-page {
-    background: #fff0fa;
+    background: linear-gradient(120deg, #fff0fa 0%, #e0f7fa 100%);
+    min-height: 100vh;
+    padding-bottom: 2rem;
 }
 
-.page-header {
+.products-page .page-header {
     background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
+    color: #fff;
+    border-radius: 18px;
+    margin: 2rem 0 2.5rem 0;
+    box-shadow: 0 4px 24px rgba(255, 182, 193, 0.08);
+    text-align: center;
+    padding: 2.5rem 1rem 2rem 1rem;
+}
+
+.products-page .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.products-page .product-card {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.10), 0 1.5px 8px 0 rgba(247, 212, 39, 0.08);
+    overflow: hidden;
+    position: relative;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    text-align: center;
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid transparent;
+}
+
+.products-page .product-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 16px 48px 0 rgba(255, 182, 193, 0.16), 0 3px 12px 0 rgba(247, 212, 39, 0.12);
+    border-color: #ffb6b9;
+}
+
+.products-page .product-card img {
+    width: 100%;
+    max-width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
+}
+
+.products-page .product-card h3 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0 0.3rem 0;
+    color: #333;
+}
+
+.products-page .product-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 0.7rem;
+}
+
+.products-page .price {
+    font-weight: bold;
+    color: #f7d427;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.products-page .badge {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.3rem 0.9rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
+    z-index: 2;
+    letter-spacing: 0.5px;
+}
+
+.products-page .badge-featured {
+    background: linear-gradient(90deg, #f7d427 0%, #ffb6b9 100%);
+}
+
+.products-page .badge-new {
+    background: linear-gradient(90deg, #ffb6b9 0%, #e0f7fa 100%);
+}
+
+.products-page .add-to-cart {
+    background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0.7rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
+    transition: background 0.2s, transform 0.2s;
+}
+
+.products-page .add-to-cart:hover {
+    background: linear-gradient(90deg, #f7d427 0%, #ffb6b9 100%);
+    transform: scale(1.06);
+}
+
+@media (max-width: 900px) {
+    .products-page .products-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1.2rem;
+    }
+
+    .products-page .page-header {
+        padding: 1.5rem 0.5rem 1.2rem 0.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .products-page {
+        padding-bottom: 1rem;
+    }
+
+    .products-page .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .products-page .product-card {
+        padding: 1rem 0.5rem 1rem 0.5rem;
+    }
+
+    .products-page .page-header {
+        margin: 1rem 0 1.2rem 0;
+        border-radius: 10px;
+    }
+}
+
+[data-theme="dark"] .products-page {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+}
+
+[data-theme="dark"] .products-page .product-card {
+    background: #232526;
+    color: #fff;
+    box-shadow: 0 8px 32px 0 rgba(255, 183, 71, 0.10), 0 1.5px 8px 0 rgba(78, 205, 196, 0.10);
+}
+
+[data-theme="dark"] .products-page .page-header {
+    background: linear-gradient(90deg, #232526 0%, #414345 100%);
     color: #fff;
 }
