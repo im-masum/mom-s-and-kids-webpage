@@ -129,6 +129,30 @@
     transform: scale(1.06);
 }
 
+.category-heading {
+    font-size: 1.3rem;
+    color: #ffb6b9;
+    font-weight: 700;
+    margin: 2.5rem 0 1rem 0;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    text-align: left;
+}
+
+.badge-best {
+    background: linear-gradient(90deg, #f7d427 0%, #ffb6b9 100%);
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.3rem 0.9rem;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
+    z-index: 2;
+    letter-spacing: 0.5px;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    opacity: 0.95;
+}
+
 @media (max-width: 900px) {
     .products-page .products-grid {
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -177,6 +201,15 @@
 
 [data-theme="dark"] .products-page .badge {
     background: linear-gradient(90deg, #f7d427 0%, #ffb6b9 100%);
+    color: #fff;
+}
+
+[data-theme="dark"] .category-heading {
+    color: #f7d427;
+}
+
+[data-theme="dark"] .badge-best {
+    background: linear-gradient(90deg, #ffb6b9 0%, #f7d427 100%);
     color: #fff;
 }
 
