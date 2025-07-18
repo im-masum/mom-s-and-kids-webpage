@@ -46,9 +46,10 @@
 .products-page .products-grid {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 1.5rem;
     margin: 2rem 0;
-    width: 95%;
+    width: 100%;
     max-width: 100%;
     align-items: center;
     justify-content: center;
