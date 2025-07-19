@@ -183,6 +183,7 @@
     color: #fffbe7;
 }
 
+
 .products-page {
     display: flex;
     flex-direction: column;
@@ -190,11 +191,12 @@
     max-width: 100%;
     background: linear-gradient(120deg, #fff0fa 0%, #e0f7fa 100%);
     min-height: 100vh;
-    padding: min(1rem, 8%);
+    padding: min(1rem, 8%) 1rem;
     align-items: center;
     justify-content: center;
     padding-top: 100px;
 }
+
 
 .products-page .card {
     display: flex;
@@ -214,8 +216,10 @@
     justify-content: center;
     width: 100%;
     max-width: 100%;
-    gap: 1rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
+    padding: min(1rem, 8%);
+    margin: 0 auto;
 }
 
 .products-page .page-header {
