@@ -195,6 +195,7 @@
     align-items: center;
     justify-content: center;
     padding-top: 100px;
+
 }
 
 
@@ -207,10 +208,11 @@
     max-width: 100%;
     background: var(--bg-color);
     border-radius: 1rem;
+    margin: 0 auto;
 
 }
 
-.products-page .products {
+.products-page .products-grid .products {
     display: flex;
     align-items: center;
     justify-content: center;
