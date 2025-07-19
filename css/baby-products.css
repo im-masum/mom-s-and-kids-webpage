@@ -13,7 +13,7 @@
     padding-top: 100px;
 }
 
-.products-page .feeding {
+.products-page .card {
     display: flex;
     flex-direction: column;
     align-items: center;
