@@ -269,7 +269,7 @@
     height: 250px;
     object-fit: cover;
     border-radius: 16px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     box-shadow: 0 2px 8px rgba(255, 182, 193, 0.10);
     transition: transform 0.3s;
 }
@@ -280,7 +280,7 @@
 
 .products-page .product-card h3 {
     font-size: 1.15rem;
-    margin: 0.5rem 0 0.3rem 0;
+    margin: 0.1rem 0;
     color: #ffb6b9;
     font-weight: 700;
     font-family: 'Segoe UI', 'Arial', sans-serif;
@@ -297,7 +297,7 @@
     font-weight: bold;
     color: #f7d427;
     font-size: 1.1rem;
-    margin-bottom: .5rem;
+    margin: 0.1rem 0;
     display: block;
 }
 
