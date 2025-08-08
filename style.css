@@ -708,7 +708,7 @@ nav.scrolled {
     text-transform: capitalize;
 }
 
-/* Hero Stats Styles */
+/* ======Hero Stats Styles======= */
 .hero-stats {
     display: flex;
     flex-wrap: wrap;
