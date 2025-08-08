@@ -704,6 +704,8 @@ nav.scrolled {
     font-size: 0.9rem;
     opacity: 0.8;
     display: block;
+    text-align: center;
+    text-transform: capitalize;
 }
 
 /* Hero Stats Styles */
