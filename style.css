@@ -720,9 +720,10 @@ nav.scrolled {
     backdrop-filter: blur(10px);
     border-radius: 20px;
     box-shadow: 0 8px 32px rgba(34, 33, 33, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-
+    animation: fadeInUp 1.5s ease-out;
+    position: relative;
+    z-index: 1;
 }
 
 .stat {
