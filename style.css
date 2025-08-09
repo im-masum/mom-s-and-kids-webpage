@@ -159,6 +159,7 @@ nav.scrolled {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background: linear-gradient(45deg, #f7d427, #f8534d);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: slideDown 1s ease-out;
 }
@@ -514,10 +515,10 @@ nav.scrolled {
         transform: translateX(0);
     }
 }
+/* ===== Header Close ===== */
 
 
-
-/* Hero Section */
+/*======== Hero Section Start =========*/
 .hero {
     display: flex;
     align-items: center;
