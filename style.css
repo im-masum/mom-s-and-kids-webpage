@@ -1567,7 +1567,7 @@ nav.scrolled {
     }
 }
 
-/* Contact Section Styles */
+/*======= Contact Section Start ======= */
 .contact {
     max-width: 100%;
     width: 100%;
@@ -1575,7 +1575,7 @@ nav.scrolled {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: min(2rem, 16%) 1rem;
+    padding: min(2rem, 10%) 1rem;
     background: var(--bg-color);
     position: relative;
     overflow: hidden;
