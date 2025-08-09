@@ -1909,13 +1909,15 @@ nav.scrolled {
 }
 
 .footer-logo .logo-text {
+    display: block;
     font-size: 1.8rem;
     font-weight: bold;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     -webkit-text-fill-color: var(--accent-color-rgb);
     margin-bottom: 1rem;
-    display: block;
 }
 
 .footer-logo p {
