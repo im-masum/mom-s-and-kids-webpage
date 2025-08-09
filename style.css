@@ -2193,7 +2193,9 @@ nav.scrolled {
 }
 
 .footer-bottom {
-    max-width: 1200px;
+    max-width: 100%;
+    width: 100%;
+    padding: min(2rem, 8%) 1rem;
     margin: 4rem auto 0;
     padding-top: 2rem;
     border-top: 1px solid var(--border-color);
@@ -3676,9 +3678,9 @@ nav.scrolled {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     letter-spacing: 1px;
     animation: fadeInDown 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    text-shadow: 0 2px 4px rgba(255, 107, 107, 0.2);
 }
 
 .payment-header p {
