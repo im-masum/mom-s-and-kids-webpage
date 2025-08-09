@@ -3192,8 +3192,6 @@ nav.scrolled {
     max-width: 100%;
     width: 100%;
 
-
-
 }
 
 .testimonials::before {
@@ -3267,7 +3265,7 @@ nav.scrolled {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .testimonials-container {
         display: flex;
         flex-direction: column;
