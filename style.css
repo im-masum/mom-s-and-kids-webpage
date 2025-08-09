@@ -1481,8 +1481,11 @@ nav.scrolled {
     font-weight: bold;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: var(--accent);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: var(--accent-color);
     margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
 }
 
 .achievement-label {
