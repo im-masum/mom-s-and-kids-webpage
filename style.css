@@ -1008,7 +1008,7 @@ nav.scrolled {
 
 /* ======= Hero Section End ======= */
 
-/* Features Section Styles */
+/* ======= Features Section Start ======= */
 .features {
     display: flex;
     flex-direction: column;
@@ -1093,7 +1093,7 @@ nav.scrolled {
     animation: fadeIn 0.5s ease;
     position: relative;
     overflow: auto;
-
+    
 }
 
 .feature-card::before {
@@ -1190,6 +1190,8 @@ nav.scrolled {
     }
 
 }
+
+/* ======= Features Section close */
 
 /* About Section Styles */
 .about {
