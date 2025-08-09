@@ -3072,6 +3072,10 @@ nav.scrolled {
 .feature i {
     color: var(--accent-color);
 }
+.feature i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
 
 .empty-cart {
     display: none;
@@ -3623,9 +3627,23 @@ nav.scrolled {
 
 /* Payment Section Styles */
 .payment {
-    padding: min(1rem, 8%) 2rem;
     background: var(--bg-color);
     position: relative;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(40, 62, 86, 0.10);
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.5s ease;
+    position: relative;
+    z-index: 1;
+    padding: min(2rem, 16%) 1rem;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -3716,6 +3734,17 @@ nav.scrolled {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+    padding: min(2rem, 16%) 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(187, 190, 193, 0.1);
+    backdrop-filter: blur(12px);
+    animation: fadeIn 0.5s ease;
+    overflow: hidden;
 }
 
 .payment-methods-grid {
@@ -3725,13 +3754,16 @@ nav.scrolled {
     justify-content: center;
     margin: 0 auto;
     max-width: 100%;
-    width: 95%;
+    width: 100%;
     gap: 1.5rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
+    padding: min(2rem, 16%) 1rem;
 }
 
 .payment-method-card {
-    max-width: 300px;
+    max-width: 400px;
     height: 250px;
     width: 100%;
     background: linear-gradient(135deg, #fff6e0 0%, #ffe0e9 100%);
