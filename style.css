@@ -578,6 +578,7 @@ nav.scrolled {
     line-height: 1.2;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     background: linear-gradient(45deg, #f7d427, #f8534d);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: slideDown 1s ease-out;
