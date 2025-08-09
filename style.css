@@ -3559,6 +3559,7 @@ nav.scrolled {
 .social-link .fa-instagram {
     background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     transition: all 0.4s ease;
 }
@@ -3860,7 +3861,6 @@ nav.scrolled {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     transition: filter 0.3s, transform 0.3s;
 }
 
@@ -3868,7 +3868,7 @@ nav.scrolled {
     filter: brightness(1.2) drop-shadow(0 2px 8px rgba(0, 0, 0, 0.15));
     transform: scale(1.15) rotate(-8deg);
     -webkit-text-fill-color: #fff;
-    text-fill-color: #fff;
+
 }
 
 .badge {
