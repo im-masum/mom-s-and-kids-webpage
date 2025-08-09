@@ -532,7 +532,6 @@ nav.scrolled {
     width: 100%;
     border-radius: 20px;
 
-
 }
 
 .hero::before {
@@ -1015,8 +1014,7 @@ nav.scrolled {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: min(1rem, 8%) 1rem;
-    background: var(--bg-color);
+    padding: min(2rem, 10%) 1rem;
     position: relative;
     overflow: hidden;
     max-width: 100%;
@@ -1024,6 +1022,11 @@ nav.scrolled {
     margin-top: 50px;
     border-radius: 20px;
     margin: 0 20px;
+    background: var(--bg-color);
+    box-shadow: 0 4px 20px var(--nav-shadow);
+    animation: fadeInUp 1s ease-out;
+    color: var(--text-color);
+    z-index: 1;
 }
 
 .features::before {
@@ -1065,17 +1068,22 @@ nav.scrolled {
     align-items: center;
     text-align: center;
     gap: 1rem;
-    max-width: 1200px;
+    max-width: 100%;
+    padding: min(1rem, 8%) 1rem;
     width: 100%;
     margin: 0 auto;
     position: relative;
-    z-index: 1;
+    z-index: 2;
     border-radius: 20px;
+    background: var(--bg-color);
+    box-shadow: 0 4px 20px var(--nav-shadow);
+    animation: fadeInUp 0.5s ease;
+    color: var(--text-color);
 }
 
 .feature-card {
-    flex: 1 1 300px;
-    max-width: 350px;
+    flex: 1 1 350px;
+    max-width: 400px;
     height: 400px;
     background: var(--card-bg);
     border-radius: 15px;
@@ -1084,7 +1092,7 @@ nav.scrolled {
     transition: all 0.3s ease;
     animation: fadeIn 0.5s ease;
     position: relative;
-    overflow: hidden;
+    overflow: auto;
 
 }
 
