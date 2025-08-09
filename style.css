@@ -791,8 +791,7 @@ nav.scrolled {
     font-size: clamp(1rem, 2vw, 1.5rem);
     font-weight: 600;
     text-align: center;
-
-
+    line-height: 1.2;
 }
 
 .stat-label {
@@ -914,7 +913,6 @@ nav.scrolled {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
     filter: drop-shadow(0 2px 8px #ff6b6b44);
     animation: scrollArrowGlow 1.2s infinite alternate, bounce 2s infinite;
     transition: transform 0.3s;
