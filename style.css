@@ -1895,6 +1895,7 @@ nav.scrolled {
     margin: 0 auto;
     position: relative;
     z-index: 1;
+
 }
 
 .footer-section {
@@ -1906,6 +1907,7 @@ nav.scrolled {
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
 }
 
 .footer-section:hover {
@@ -1915,6 +1917,7 @@ nav.scrolled {
 
 .footer-logo {
     margin-bottom: 2rem;
+    text-align: center;
 }
 
 .footer-logo .logo-text {
@@ -1956,6 +1959,13 @@ nav.scrolled {
 
 .footer-section:hover h3::after {
     width: 100px;
+}
+
+.social-links {
+    display: inline-flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-links {
