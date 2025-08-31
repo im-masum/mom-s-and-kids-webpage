@@ -2040,6 +2040,153 @@ nav.scrolled {
     box-shadow: 0 6px 20px rgba(var(--accent-color-rgb), 0.3);
 }
 
+.footer-bottom {
+    max-width: 100%;
+    width: 100%;
+    padding: min(2rem, 8%) 1rem;
+    margin: 4rem auto 0;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-info p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.footer-extra-links {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-extra-links a {
+    color: var(--text-color);
+    opacity: 0.8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.footer-extra-links a:hover {
+    opacity: 1;
+    color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.footer-app-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.app-link {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 1.5rem;
+    background: var(--card-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.app-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.app-link i {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: var(--accent-color);
+    /* Add accent color to icon */
+}
+
+.app-link:hover i {
+    transform: scale(1.1);
+    color: #fff;
+    /* Change icon color on hover for contrast */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 3rem 1rem 1rem;
+    }
+    
+    .footer-content {
+        gap: 2rem;
+    }
+    
+    .footer-section {
+        min-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-extra-links {
+        justify-content: center;
+    }
+
+    .footer-app-links {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .app-link {
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* ======= Footer End ======= */
+
 .payment-methods {
     display: flex;
     gap: 1.2rem;
@@ -2204,152 +2351,6 @@ nav.scrolled {
     opacity: 1;
 }
 
-.footer-bottom {
-    max-width: 100%;
-    width: 100%;
-    padding: min(2rem, 8%) 1rem;
-    margin: 4rem auto 0;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.footer-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.footer-info p {
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-.footer-extra-links {
-    display: flex;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.footer-extra-links a {
-    color: var(--text-color);
-    opacity: 0.8;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    background: var(--card-bg);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
-.footer-extra-links a:hover {
-    opacity: 1;
-    color: var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.footer-app-links {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-}
-
-.app-link {
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
-    padding: 1rem 1.5rem;
-    background: var(--card-bg);
-    color: var(--text-color);
-    text-decoration: none;
-    border-radius: 12px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.app-link:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.app-link i {
-    font-size: 1.5rem;
-    transition: transform 0.3s ease, color 0.3s ease;
-    color: var(--accent-color);
-    /* Add accent color to icon */
-}
-
-.app-link:hover i {
-    transform: scale(1.1);
-    color: #fff;
-    /* Change icon color on hover for contrast */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .footer {
-        padding: 3rem 1rem 1rem;
-    }
-
-    .footer-content {
-        gap: 2rem;
-    }
-
-    .footer-section {
-        min-width: 100%;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-extra-links {
-        justify-content: center;
-    }
-
-    .footer-app-links {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .app-link {
-        justify-content: center;
-    }
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     nav ul {
@@ -2361,7 +2362,7 @@ nav.scrolled {
         width: 100%;
         display: none;
     }
-
+    
     nav ul.show {
         display: flex;
     }
