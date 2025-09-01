@@ -4335,7 +4335,7 @@ nav.scrolled {
     padding-bottom: 2rem;
 }
 
-.kids-products-page .page-header {
+/* .kids-products-page .page-header {
     background: linear-gradient(90deg, #4ecdc4 0%, #ffb347 100%);
     color: #fff;
     border-radius: 18px;
@@ -4343,7 +4343,7 @@ nav.scrolled {
     box-shadow: 0 4px 24px rgba(78, 205, 196, 0.08);
     text-align: center;
     padding: 2.5rem 1rem 2rem 1rem;
-}
+} */
 
 .kids-products-page .products-grid {
     display: flex;
