@@ -2133,11 +2133,11 @@ nav.scrolled {
     .footer {
         padding: 3rem 1rem 1rem;
     }
-    
+
     .footer-content {
         gap: 2rem;
     }
-    
+
     .footer-section {
         min-width: 100%;
     }
@@ -2179,12 +2179,13 @@ nav.scrolled {
         opacity: 0;
         transform: translateX(-50px);
     }
-    
+
     to {
         opacity: 1;
         transform: translateX(0);
     }
 }
+
 /* ======= Footer End ======= */
 
 .payment-methods {
@@ -2362,7 +2363,7 @@ nav.scrolled {
         width: 100%;
         display: none;
     }
-    
+
     nav ul.show {
         display: flex;
     }
@@ -4335,7 +4336,7 @@ nav.scrolled {
     padding-bottom: 2rem;
 }
 
-/* .kids-products-page .page-header {
+.kids-products-page .page-header {
     background: linear-gradient(90deg, #4ecdc4 0%, #ffb347 100%);
     color: #fff;
     border-radius: 18px;
@@ -4343,7 +4344,7 @@ nav.scrolled {
     box-shadow: 0 4px 24px rgba(78, 205, 196, 0.08);
     text-align: center;
     padding: 2.5rem 1rem 2rem 1rem;
-} */
+}
 
 .kids-products-page .products-grid {
     display: flex;
