@@ -483,13 +483,14 @@
     flex-wrap: wrap;
     gap: 2rem;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
 }
 
 .footer-section {
-    flex: 1 1 200px;
-    min-width: 200px;
+    flex: 1 1 400px;
+    min-width: 300px;
 }
 
 .footer-logo .logo-text {
