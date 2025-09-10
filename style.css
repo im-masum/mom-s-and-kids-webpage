@@ -4359,7 +4359,7 @@ nav.scrolled {
 }
 
 .kids-products-page .product-card {
-    background: #fffbe7;
+    background: var(--bg-color);
     border-radius: 22px;
     box-shadow: 0 8px 32px 0 rgba(255, 183, 71, 0.10), 0 1.5px 8px 0 rgba(78, 205, 196, 0.08);
     overflow: hidden;
