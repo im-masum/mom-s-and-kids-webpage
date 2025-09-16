@@ -381,7 +381,6 @@ nav {
 @media (max-width: 768px) {
     .nav-container {
         padding: 1rem;
-        
     }
 
 
@@ -406,7 +405,7 @@ nav {
     .nav-links.active {
         display: block;
         position: absolute;
-        top: 100%;
+        top: 100px;
         left: 0;
         right: 0;
         background: var(--nav-bg);
