@@ -218,7 +218,7 @@ nav {
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
 }
 
 .dropdown-container:hover .dropdown {
@@ -381,7 +381,7 @@ nav {
 @media (max-width: 768px) {
     .nav-container {
         padding: 1rem;
-        flex-wrap: wrap;
+        
     }
 
 
@@ -389,21 +389,18 @@ nav {
         display: block;
         justify-content: center;
         align-items: center;
-        position: fixed;
-        top: 1cap;
+        position: absolute;
+        top: 100%;
         right: -100%;
-        width: 100%;
         max-width: 100%;
-        width: 90%;
-        height: 100vh;
+        width: 70%;
+        height: auto;
         background: var(--bg-dark);
         color: var(--text-color);
         padding: min(1rem, 10%) 1rem;
         transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         z-index: 999;
-        border-radius: 0 0 16px 16px;
-        margin: 0 auto;
     }
 
     .nav-links.active {
@@ -418,69 +415,47 @@ nav {
         animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
-    /* .nav-links ul {
+    .nav-links ul {
         flex-direction: column;
         gap: 1rem;
-    } */
+    }
 
     .nav-links ul li {
         margin-bottom: 10px;
-    }
-
-
-    .dropdown {
-        position: absolute;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        display: none;
-        background: var(--bg-dark);
-        border-radius: 10px;
-
-    }
-
-    .dropdown-container:hover .dropdown {
-        display: block;
     }
 
     .menu-toggle {
         display: flex;
     }
 
-
-
     .nav-links ul {
         display: block;
         background: var(--bg-dark);
         gap: 0.8rem;
-        padding: min(1rem, 10%);
+        padding: min(1rem, 8%) 1rem;
         border-radius: 10px;
-        width: 90%;
+        width: 70%;
     }
 
     .nav-links ul li a {
         display: block;
         text-align: center;
-        padding: 0.8rem;
-        font-size: 1rem;
+        padding: min(0.5rem, 8%) 1rem;
+        font-size: 14px;
         color: var(--text-color);
         transition: all 0.3s ease;
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.05);
     }
-
-    .dropdown {
-        position: relative;
-        box-shadow: none;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        display: none;
-    }
-
+    
     .dropdown-container:hover .dropdown {
         display: block;
+        position: relative;
+    }
+
+    .dropdown li a {
+        background: transparent;
+        padding: 0.5rem 0;
     }
 
     .nav-link:hover {
