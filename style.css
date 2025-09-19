@@ -646,7 +646,7 @@ nav {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: min(1rem, 16%) .8rem;
+    padding: min(1rem, 8%) .8rem;
     border-radius: 20px;
     transition: transform 0.3s ease;
     max-width: 300px;
@@ -660,7 +660,7 @@ nav {
 }
 
 .feature-icon {
-    font-size: 4rem;
+    font-size: 2rem;
     display: block;
 }
 
@@ -686,7 +686,6 @@ nav {
     min-width: 100%;
     width: 100%;
     gap: 4rem;
-    margin-top: 2rem;
     padding: min(1rem, 8%) 0;
     backdrop-filter: blur(10px);
     border-radius: 20px;
@@ -707,7 +706,7 @@ nav {
     width: 100%;
     gap: 1rem;
     padding: min(1rem, 8%) 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--gradient-light);
     border-radius: 15px;
     transition: all 0.3s ease;
 }
