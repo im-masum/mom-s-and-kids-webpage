@@ -646,13 +646,13 @@ nav {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    padding: min(1rem, 8%) 1rem;
+    padding: min(1rem, 16%) .8rem;
     border-radius: 20px;
     transition: transform 0.3s ease;
     max-width: 300px;
     width: 100%;
-    height: 200px;
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    height: 150px;
+    font-size: clamp(0.5rem, 5vw, 1.2rem);
 }
 
 .hero-feature:hover {
@@ -661,14 +661,12 @@ nav {
 
 .feature-icon {
     font-size: 4rem;
-    margin-bottom: .5rem;
     display: block;
 }
 
 .hero-feature p {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(.5rem, 5vw, 1.2rem);
     font-weight: 600;
-    margin: 0.5rem 0;
 }
 
 .feature-desc {
