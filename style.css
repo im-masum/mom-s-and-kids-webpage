@@ -214,21 +214,26 @@ nav {
     border-radius: 12px;
     padding: 1rem;
     min-width: 200px;
+    width: 100%;
     box-shadow: 0 4px 20px var(--nav-shadow);
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
     transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .dropdown-container:hover .dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    top: 150%;
 }
 
 .dropdown li {
     margin: 0.5rem 0;
+    
 }
 
 .dropdown a {
@@ -238,12 +243,14 @@ nav {
     display: block;
     border-radius: 6px;
     transition: all 0.3s ease;
+    
 }
 
 .dropdown a:hover {
     background: var(--gradient-primary);
     color: white;
     transform: translateX(5px);
+    border: 1px solid var(--accent);
 }
 
 .nav-actions {
