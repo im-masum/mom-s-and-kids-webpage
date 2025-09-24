@@ -26,7 +26,7 @@
 }
 
 .products-page .product-card {
-    /* background: #fff; */
+    background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 8px 32px 0 rgba(255, 107, 107, 0.10), 0 1.5px 8px 0 rgba(78, 205, 196, 0.08);
     overflow: hidden;
